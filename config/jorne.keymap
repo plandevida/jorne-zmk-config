@@ -29,7 +29,7 @@
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
-                cp: functions_cp {
+                mc: functions_cp {
                         compatible = "zmk,behavior-hold-tap";
                         label = "COPY_PASTE_MOD";
                         #binding-cells = <2>;
@@ -43,7 +43,7 @@
                 compatible = "zmk,keymap";
 
                 querty_layer {
-                        label = "QWRTY",
+                        label = "QWRTY";
 // -----------------------------------------------------------------------------------------
 // | GUI | TAB  |  Q  |  W  |  E  |  R  |  T  |               |  Y  |  U   |  I  |  O  |  P  |  [   |  ]  |
 //       | CTRL |  A  |  S  |  D  |  F  |  G  |               |  H  |  J   |  K  |  L  |  ;  |CTRL/'|
@@ -53,11 +53,11 @@
    &kp LGUI &kp TAB   &kp Q &kp W &kp E &kp R &kp T &kp Y           &kp U  &kp I     &kp O   &kp P    &kp LBKT      &kp RBKT
             &kp LCTRL &kp A &kp S &kp D &kp F &kp G &kp H           &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
             &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp N           &kp M  &kp COMMA &kp DOT &kp FSLH &mt RALT BSLH
-                         &lt MOUSE DEL &lt NUMBERS SPACE &kp RET  &kp RET &lt NUMBERS SPACE &kp BSPC
+                        &lt MOUSE DEL &lt NUMBERS SPACE &kp RET  &kp RET &lt NUMBERS SPACE &kp BSPC
                         >;
                 };
                 homemod_layer {
-                        label = "HMMOD",
+                        label = "HMMOD";
 // -----------------------------------------------------------------------------------------
 // | TAB | CONFG |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [  |  ]  |
 //       | NUM   | LGUI/A | LALT/S | LSFT/D | LCTR/F |  G  |             |  H  | RCTR/J | RSFT/K | RALT/L | RGUI/; |  '  |
@@ -66,12 +66,12 @@
                         bindings = <
    &kp TAB &tog CONFIG  &kp Q      &kp W       &kp E        &kp R         &kp T       &kp Y &kp U       &kp I       &kp O      &kp P         &kp LBKT &kp RBKT
            &tog NUMBERS &hm LGUI A &hm LALT S  &hm LSHFT D  &hm LCTRL F   &kp G       &kp H &hm RCTRL J &hm RSHFT K &hm RALT L &hm RGUI SEMI &kp SQT
-           &tog MOUSE   &kp Z      &cp K_CUT X &cp K_COPY C &cp K_PASTE V &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp BSLH
+           &tog MOUSE   &kp Z      &mc K_CUT X &mc K_COPY C &mc K_PASTE V &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp BSLH
                                                          &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
                 homemodmac_layer {
-                        label = "HMMAC",
+                        label = "HMMAC";
 // | TAB | CONFG |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [  |  ]  |
 //       | NUM   | LGUI/A | LALT/S | LCTR/D | LSFT/F |  G  |             |  H  | RSFT/J | RCTR/K | RALT/L | RGUI/; |  '  |
 //       | MOUSE |  Z     | CUT/X  | COPY/C | PSTE/V |  B  |             |  N  |    M   |    ,   |    .   |    /   |  \  |
@@ -79,12 +79,12 @@
                         bindings = <
    &kp TAB &tog CONFIG  &kp Q      &kp W       &kp E        &kp R         &kp T       &kp Y &kp U       &kp I       &kp O      &kp P         &kp LBKT &kp RBKT
            &tog NUMBERS &hm LGUI A &hm LALT S  &hm LCTRL D  &hm LSHFT F   &kp G       &kp H &hm RSHFT J &hm RCTRL K &hm RALT L &hm RGUI SEMI &kp SQT
-           &tog MOUSE   &kp Z      &cp K_CUT X &cp K_COPY C &cp K_PASTE V &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp BSLH
+           &tog MOUSE   &kp Z      &mc K_CUT X &mc K_COPY C &mc K_PASTE V &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp BSLH
                                                          &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
                 valorant_layer {
-                        label = "VLRNT",
+                        label = "VLRNT";
 // -----------------------------------------------------------------------------------------
 // | NUM | TAB  |  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  [  |  ]  |
 //       | CTRL |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '  |
@@ -98,7 +98,7 @@
                         >;
                 };
                 gaming_layer {
-                        label = "GM'NG",
+                        label = "GM'NG";
 // -----------------------------------------------------------------------------------------
 // | NUM | TAB  |  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  [   |  ]  |
 //       | CTRL |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '  |
@@ -112,7 +112,7 @@
                         >;
                 };
                 numbers_layer {
-                        label = "NUMBR",
+                        label = "NUMBR";
 // -----------------------------------------------------------------------------------------
 // | -v- | CONFG | GRV |  7  |  8  |  9  |  0  |   | PGUP| ___ |  UP | ___ | HOME| HOME| ESC |
 //       | -v-   |  -  |  4  |  5  |  6  | ___ |   | PGDN| LEFT| DOWN| RGHT| END | END |
@@ -126,7 +126,7 @@
                         >;
                 };
                 symbols_layer {
-                        label = "SYBML",
+                        label = "SYBML";
 // -----------------------------------------------------------------------------------------
 // | -v- | CONFG |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  [  |  ]  |  ˜  | ESC |
 //       |  -v-  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
@@ -140,7 +140,7 @@
                         >;
                 };
                 mouse_layer {
-                        label = "MOUSE",
+                        label = "MOUSE";
 // -----------------------------------------------------------------------------------------
 // | -v- | CONFG |  /  |  7  |  8  |  9  |  -  |   | F1  | F2  | F3  | F4  | SCLK| CLCK| -v- |
 //       |  -v-  |  *  |  4  |  5  |  6  |  +  |   | F5  | F6  | F7  | F8  | INS | APP |
@@ -154,7 +154,7 @@
                         >;
                 };
                 config_layer {
-                        label = "CONFG",
+                        label = "CONFG";
 // -----------------------------------------------------------------------------------------
 // | -v- | -v- | QWERTY |HOMEMOD |HOMEMODMAC | GAMING  |VALORANT |   |     |     |     |         |         | BLDR    | RST |
 //       | -v- |        |        | OUT_BLE   | OUT_TOG | OUT_USB |   | BT4 | BT3 | BT2 | BT1     | BT0     | BTCLR   |
