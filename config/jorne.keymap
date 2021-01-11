@@ -115,14 +115,14 @@
                         label = "NUMBR";
 // -----------------------------------------------------------------------------------------
 // | -v- | CONFG | GRV |  7  |  8  |  9  |  0  |   | PGUP| ___ |  UP | ___ | HOME| HOME| ESC |
-//       | -v-   |  -  |  4  |  5  |  6  | ___ |   | PGDN| LEFT| DOWN| RGHT| END | END |
+//       |SYMBOLS|  -  |  4  |  5  |  6  | ___ |   | PGDN| LEFT| DOWN| RGHT| END | END |
 //       | -v-   |  =  |  1  |  2  |  3  |  0  |   | ___ | ___ | ___ | ___ | ___ | CAPS|
-//                           |SYBML| -v- | RET |   |CONFG| -v- | -v- |
+//                           | -v- | -v- | RET |   |CONFG| -v- | -v- |
                         bindings = <
-   &trans &tog CONFIG &kp GRAVE &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_N0           &kp PG_UP &none    &kp UP   &none     &kp HOME &kp HOME &kp ESC
-          &trans      &kp MINUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &none               &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp END  &kp END
-          &trans      &kp EQUAL &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_N0           &none     &none    &none    &none     &none    &kp CAPS
-                                                 &mo SYMBOLS &trans &kp RET   &mo CONFIG &trans &trans
+   &trans &tog CONFIG &kp GRAVE &kp N7 &kp N8 &kp N9 &kp KP_N0           &kp PG_UP &none    &kp UP   &none     &kp HOME &kp HOME &kp ESC
+          &tog SYMBOLS &kp MINUS &kp N4 &kp N5 &kp N6 &none               &kp PG_DN &kp LEFT &kp DOWN &kp RIGHT &kp END  &kp END
+          &trans      &kp EQUAL &kp N1 &kp N2 &kp N3 &kp KP_N0           &none     &none    &none    &none     &none    &kp CAPS
+                                         &trans &trans &kp RET   &mo CONFIG &trans &trans
                         >;
                 };
                 symbols_layer {
@@ -163,7 +163,7 @@
                         bindings = <
    &trans &trans  &to QWERTY &to HOMEMOD  &to HOMEMODMAC &to GAMING   &to VALORANT        &none        &none        &none        &none        &none         &bootloader &reset
           &trans  &none      &none        &out OUT_BLE   &out OUT_TOG &out OUT_USB        &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR
-          &trans  &none      &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_SEL 3        &none        &none        &none        &out OUT_USB &out OUT_TOG &out OUT_BLE
+          &trans  &none      &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3 &bt BT_SEL 4        &none        &none        &none        &out OUT_USB &out OUT_TOG &out OUT_BLE
                                                                   &trans &trans &trans   &trans &trans &trans
                         >;
                 };
