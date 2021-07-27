@@ -23,11 +23,8 @@ jobs:
     if: ${{ always() }}
     runs-on: ubuntu-latest
     container:
-      image: docker.io/zmkfirmware/zmk-build-arm:4.1
-    needs: compile-matrix
-    strategy:
-      matrix:
-        include: ${{ fromJSON(needs.compile-matrix.outputs.include-list) }}
+      image: zmkfirmware/zmk-build-arm:2.5
+    name: Build
     steps:
       - name: Checkout
         uses: actions/checkout@v6
