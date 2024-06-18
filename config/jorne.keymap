@@ -161,7 +161,7 @@
 //       | -v- |        | BT0    | BT1       | BT2     | BT3     |   |     |     | OUT_USB | OUT_TOG | OUT_BLE |
 //                               | -v-       | -v-     | -v-     |   | -v- | -v- | -v- |
                         bindings = <
-   &trans &trans  &to QWERTY &to HOMEMOD  &to HOMEMODMAC &to GAMING   &to VALORANT        &none        &none        &none        &none        &none         &bootloader &reset
+   &trans &trans  &to QWERTY &to HOMEMOD  &to HOMEMODMAC &to GAMING   &to VALORANT        &none        &none        &none        &none        &none         &bootloader &none
           &trans  &none      &none        &out OUT_BLE   &out OUT_TOG &out OUT_USB        &bt BT_SEL 4 &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0  &bt BT_CLR
           &trans  &none      &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3 &bt BT_SEL 4        &none        &none        &none        &out OUT_USB &out OUT_TOG &out OUT_BLE
                                                                   &trans &trans &trans   &trans &trans &trans
