@@ -77,5 +77,18 @@
                         &lt MOUSE DEL &lt NUMBERS SPACE &kp RET  &kp RET &lt NUMBERS SPACE &kp BSPC
                         >;
                 };
+                homemodmac_layer {
+                        label = "HMMAC";
+// | TAB | CONFG |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [  |  ]  |
+//       | NUM   | LCMD/A | LCTR/S | LALT/D | LSFT/F |  G  |             |  H  | RSFT/J | RALT/K | RCTR/L | RCMD/; |  '  |
+//       | SYMBL |  Z     | CUT/X  | COPY/C | PSTE/V |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \  |
+//                                            | DEL | SPC | RET |  | RET | SPC | BKSP |
+                        bindings = <
+   &kp TAB &tog CONFIG  &kp Q      &kp W       &kp E        &kp R         &kp T       &kp Y &kp U       &kp I       &kp O      &kp P         &kp LBKT &kp RBKT
+           &tog NUMBERS &hm LCMD A &hm LCTRL S  &hm LALT D  &hm LSHFT F   &kp G       &kp H &hm RSHFT J &hm RALT K &hm RCTRL L &hm RCMD SEMI &kp SQT
+           &tog SYMBL   &kp Z      &ct_mod      &cp_mod     &pt_mod       &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp BSLH
+                                                         &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
+                        >;
+                };
         };
 };
