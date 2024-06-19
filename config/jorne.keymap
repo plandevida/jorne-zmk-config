@@ -86,7 +86,7 @@
                         bindings = <
    &kp TAB &tog CONFIG  &kp Q      &kp W       &kp E        &kp R         &kp T       &kp Y &kp U       &kp I       &kp O      &kp P         &kp LBKT &kp RBKT
            &tog NUMBERS &hm LCMD A &hm LCTRL S  &hm LALT D  &hm LSHFT F   &kp G       &kp H &hm RSHFT J &hm RALT K &hm RCTRL L &hm RCMD SEMI &kp SQT
-           &tog SYMBL   &kp Z      &ct_mod      &cp_mod     &pt_mod       &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp BSLH
+           &tog SYMBOLS   &kp Z      &ct_mod      &cp_mod     &pt_mod       &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp BSLH
                                                          &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
