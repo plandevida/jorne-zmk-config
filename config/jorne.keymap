@@ -19,8 +19,8 @@
 #define SYMBOLS 3
 #define MOUSE 4
 #define CONFIG 5
-#define VALORANT 6
-#define GAMING 7
+//#define VALORANT 6
+//#define GAMING 7
 
 / {
         behaviors {
