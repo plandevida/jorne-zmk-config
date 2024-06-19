@@ -47,14 +47,14 @@
                         tapping_term_ms = <150>;
                         bindings = <&mt LCTRL C>, <&kp C>;
                 };
-                pt_mod: functions_cp {
+                pt_mod: functions_pt {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         label = "PASTE_MOD";
                         tapping_term_ms = <150>;
                         bindings = <&mt LCTRL V>, <&kp V>;
                 };
-                ct_mod: functions_cp {
+                ct_mod: functions_ct {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         label = "CUT_MOD";
