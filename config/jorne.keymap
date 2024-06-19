@@ -32,14 +32,6 @@
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
-                mc: functions_cp {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        label = "COPY_PASTE_MOD";
-                        tapping_term_ms = <280>;
-                        flavor = "tap-preferred";
-                        bindings = <&kp>, <&kp>;
-                };
                 cp_mod: functions_cp {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
