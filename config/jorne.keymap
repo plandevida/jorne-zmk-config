@@ -44,19 +44,19 @@
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         label = "COPY_MOD";
-                        bindings = <&mtt LCTRL C>, <&kp C>;
+                        bindings = <&mtt LCMD C>, <&kp C>;
                 };
                 pt_mod: functions_pt {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         label = "PASTE_MOD";
-                        bindings = <&mtt LCTRL V>, <&kp V>;
+                        bindings = <&mtt LCMD V>, <&kp V>;
                 };
                 ct_mod: functions_ct {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         label = "CUT_MOD";
-                        bindings = <&mtt LCTRL X>, <&kp X>;
+                        bindings = <&mtt LCMD X>, <&kp X>;
                 };
         };
 
