@@ -27,15 +27,13 @@
                 hm: homerow_mods {
                         compatible = "zmk,behavior-hold-tap";
                         label = "HOMEROW_MODS";
-                        #binding-cells = <2>;
                         tapping_term_ms = <250>;
-                        flavor = "balanced";
+                        flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
                 mc: functions_cp {
                         compatible = "zmk,behavior-hold-tap";
                         label = "COPY_PASTE_MOD";
-                        #binding-cells = <2>;
                         tapping_term_ms = <280>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
@@ -121,46 +119,16 @@
                 config_layer {
                         label = "CONFG";
 // -----------------------------------------------------------------------------------------
-// | -v- | -v- | QWERTY |SYMBOLS |HOMEMODMAC | GAMING  |VALORANT |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         |         |  BLDR   | RST |
+// | -v- | -v- | QWERTY |SYMBOLS |HOMEMODMAC | GAMING  |VALORANT |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         |         |   BLDR   | RST |
 //       | -v- |        |        | OUT_BLE   | OUT_TOG | OUT_USB |   |      RGB_ON      |      RGB_OFF      |       RGB_TOG        | RGB_SPI | RGB_SPD |  RGB_EFF |
-//       | -v- |        | BT0    | BT1       | BT2     | BTCLR   |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  | BL_DEC  |
-//                               | -v-       | -v-     | -v-     |   | -v- | -v- | -v- |
+//       | -v- |        | BT0    | BT1       | BT2     | BTCLR   |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  | BL_DEC  |          |
+//                               | -v-       | -v-     | -v-     |   | -v-              | -v-               | -v-                  |
 
                         bindings = <
-   &trans &trans  &to QWERTY &to SYMBL    &to HOMEMODMAC &to GAMING   &to VALORANT      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &none         &none         &bootloader  &sys_reset
+   &trans &trans  &to QWERTY &to SYMBL    &to HOMEMODMAC &to GAMING   &to VALORANT      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &none            &none            &bootloader     &sys_reset
           &trans  &none      &none        &out OUT_BLE   &out OUT_TOG &out OUT_USB      &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
-          &trans  &none      &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_CLR        &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC    &bl BL_DEC    &out OUT_BLE
+          &trans  &none      &bt BT_SEL 0 &bt BT_SEL 1   &bt BT_SEL 2 &bt BT_CLR        &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
                                                               &trans &trans &trans   &trans &trans &trans
-                        >;
-                };
-                valorant_layer {
-                        label = "VLRNT";
-// -----------------------------------------------------------------------------------------
-// | NUM | TAB  |  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  [  |  ]  |
-//       | CTRL |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '  |
-//       | SHFT |  Z  |  X  |  C  |  V  |  B  |         |  N  |  M   |  ,  |  .  |  /  |  \  |
-//                             |  M  | SPC |  V  |   | RET | SPC | BKSP |
-
-                        bindings = <
-   &tog NUMBERS &kp TAB   &kp Q &kp W &kp E &kp R &kp T &kp Y           &kp U  &kp I     &kp O   &kp P    &kp LBKT  &kp RBKT
-                &kp LSHFT &kp A &kp S &kp D &kp F &kp G &kp H           &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LCTRL &kp Z &kp X &kp C &kp V &kp B &kp N           &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                                            &kp M &kp SPACE &kp V  &kp RET &kp SPACE &kp BSPC
-                        >;
-                };
-                gaming_layer {
-                        label = "GM'NG";
-// -----------------------------------------------------------------------------------------
-// | NUM | TAB  |  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  [   |  ]  |
-//       | CTRL |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '  |
-//       | SHFT |  Z  |  X  |  C  |  V  |  B  |         |  N  |  M   |  ,  |  .  |  /  |  \  |
-//                             | BSPC| SPC | RET |   | RET | SPC | BKSP |
-
-                        bindings = <
-   &tog NUMBERS &kp TAB   &kp Q &kp W &kp E &kp R &kp T &kp Y           &kp U  &kp I     &kp O   &kp P    &kp LBKT  &kp RBKT
-                &kp LSHFT &kp A &kp S &kp D &kp F &kp G &kp H           &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LCTRL &kp Z &kp X &kp C &kp V &kp B &kp N           &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                                        &kp BSPC &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
         };
