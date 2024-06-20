@@ -42,7 +42,7 @@
                     bindings
                         = <&macro_press &kp LCMD>
                         , <&macro_param_1to1>
-                        , <&macro_tap &kp MACRO_PLACEHOLDER
+                        , <&macro_tap &kp MACRO_PLACEHOLDER>
                         , <&macro_release &kp LCMD>
                         ;
                 };
