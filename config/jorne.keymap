@@ -32,7 +32,7 @@
                         bindings = <&kp>, <&kp>;
                 };
 
-                bm: behabiour_makro {
+                bm: behaviour_macro {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         tapping_term_ms = <280>;
@@ -162,7 +162,7 @@
                         >;
                 };
                 gaming_layer {
-                        label = "GM'NG";
+                        label = "GAMING";
 // -----------------------------------------------------------------------------------------
 // | NUM | TAB  |  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  [   |  ]  |
 //       | CTRL |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '  |
