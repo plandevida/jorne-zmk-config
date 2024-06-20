@@ -38,7 +38,7 @@
                         tapping_term_ms = <280>;
                         flavor = "balanced";
                         bindings = <&mc_cpx &kp>, <&kp>;
-                }
+                };
         };
 
         macros {
