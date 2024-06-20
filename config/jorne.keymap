@@ -31,6 +31,14 @@
                         flavor = "balanced";
                         bindings = <&kp>, <&kp>;
                 };
+
+                bm: behabiour_makro {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping_term_ms = <280>;
+                        flavor = "balanced";
+                        bindings = <&mc_cpx &kp>, <&kp>;
+                }
         };
 
         macros {
@@ -60,7 +68,7 @@
                         bindings = <
    &kp TAB &tog CONFIG  &kp Q       &kp W        &kp E       &kp R         &kp T       &kp Y &kp U       &kp I       &kp O      &kp P          &kp LBKT &kp RBKT
            &tog NUMBERS &hm LSHFT A &hm LCTRL S  &hm LALT D  &hm LCMD F    &kp G       &kp H &hm RCMD J  &hm RALT K &hm RCTRL L &hm RSHFT SEMI &kp SQT
-           &tog SYMBOLS &kp Z       &mc_cpx X    &mc_cpx C   &mc_cpx V     &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH       &kp BSLH
+           &tog SYMBOLS &kp Z       &bm X        &bm C       &bm V         &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH       &kp BSLH
                                                          &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
