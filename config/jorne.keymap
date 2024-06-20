@@ -27,7 +27,6 @@
                 hm: homerow_mod {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        label = "HOMEROW_MOD";
                         tapping_term_ms = <280>;
                         flavor = "balanced";
                         bindings = <&kp>, <&kp>;
@@ -36,7 +35,7 @@
 
         macros {
                 mc_cpx: macro_copy_paste_cut {
-                    compatible = "zmk,behavior-macro";
+                    compatible = "zmk,behavior-macro-one-param";
                     #binding-cells = <1>;
                     wait-ms = <40>;
                     tap-ms = <40>;                
