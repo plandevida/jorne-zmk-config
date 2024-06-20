@@ -32,13 +32,13 @@
                         bindings = <&kp>, <&kp>;
                 };
 
-                // bm: behaviour_macro {
-                //         compatible = "zmk,behavior-hold-tap";
-                //         #binding-cells = <2>;
-                //         tapping_term_ms = <280>;
-                //         flavor = "balanced";
-                //         bindings = <&mc_cpx &kp>, <&kp>;
-                // };
+                bm: behaviour_macro {
+                        compatible = "zmk,behavior-hold-tap";
+                        #binding-cells = <2>;
+                        tapping_term_ms = <280>;
+                        flavor = "balanced";
+                        bindings = <&mc_cpx>, <&kp>;
+                };
         };
 
         macros {
@@ -66,9 +66,9 @@
 //       | SYMBL |  Z     | CUT/X  | COPY/C | PSTE/V |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \  |
 //                                            | DEL | SPC | RET |  | RET | SPC | BKSP |
                         bindings = <
-   &kp TAB &mo CONFIG  &kp Q       &kp W        &kp E       &kp R         &kp T       &kp Y &kp U       &kp I       &kp O      &kp P          &kp LBKT &kp RBKT
-           &mo NUMBERS &hm LSHFT A &hm LCTRL S  &hm LALT D  &hm LCMD F    &kp G       &kp H &hm RCMD J  &hm RALT K &hm RCTRL L &hm RSHFT SEMI &kp SQT
-           &mo SYMBOLS &kp Z       &kp X        &kp C       &kp V         &kp B       &kp N &kp M       &kp COMMA   &kp DOT    &kp FSLH       &kp BSLH
+   &kp TAB &mo CONFIG  &kp Q        &kp W        &kp E       &kp R         &kp T  &kp Y &kp U       &kp I       &kp O       &kp P           &kp LBKT &kp RBKT
+           &mo NUMBERS &hm LSHFT A  &hm LCTRL S  &hm LALT D  &hm LCMD F    &kp G  &kp H &hm RCMD J  &hm RALT K  &hm RCTRL L &hm RSHFT SEMI &kp SQT
+           &mo SYMBOLS &kp Z        &kp X        &kp C       &kp V         &kp B  &kp N &kp M       &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
                                                          &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
@@ -82,7 +82,7 @@
                         bindings = <
    &kp LCMD &kp TAB   &kp Q &kp W &kp E &kp R &kp T &kp Y           &kp U  &kp I     &kp O   &kp P    &kp LBKT      &kp RBKT
             &kp LCTRL &kp A &kp S &kp D &kp F &kp G &kp H           &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
-            &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &kp N           &kp M  &kp COMMA &kp DOT &kp FSLH &mt RALT BSLH
+            &kp LSHFT &kp Z &kp X &bm C C &mt LG(V) V &kp B &kp N           &kp M  &kp COMMA &kp DOT &kp FSLH &mt RALT BSLH
                         &lt MOUSE DEL &lt NUMBERS SPACE &kp RET  &kp RET &lt NUMBERS SPACE &kp BSPC
                         >;
                 };
