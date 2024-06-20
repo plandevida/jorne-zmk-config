@@ -37,7 +37,7 @@
         macros {
                 mc_cpx: macro_copy_paste_cut {
                     compatible = "zmk,behavior-macro";
-                    #binding-cells = <0>;
+                    #binding-cells = <1>;
                     wait-ms = <40>;
                     tap-ms = <40>;                
                     bindings
