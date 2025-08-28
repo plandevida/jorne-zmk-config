@@ -78,14 +78,14 @@
                         label = "NUMBR";
 // -----------------------------------------------------------------------------------------
 // | -v- | CONFG | LALT |  +  |  7  |  8  |  9  |   | PGUP| ___ |  UP | ___ | HOME| ___  | ESC |
-//       | -v-   | CTRL |  =  |  4  |  5  |  6  |   | PGDN| LEFT| DOWN| RGHT| END | CAPS |
-//       | -v-   | SHFT |  0  |  1  |  2  |  3  |   | ___ | ___ | ,/< | ./> |  /  | LCMD |
+//       | -v-   | SHFT |  =  |  4  |  5  |  6  |   | PGDN| LEFT| DOWN| RGHT| END | CAPS |
+//       | -v-   | CTRL |  0  |  1  |  2  |  3  |   | ___ | ___ | ,/< | ./> |  /  | LCMD |
 //                            | -v- | -v- | RET |   | RET | -v- | -v- |
 
                         bindings = <
    &trans &tog CONFIG &kp LALT   &kp KP_PLUS  &kp N7 &kp N8 &kp N9      &kp PG_UP &none    &kp UP    &none     &kp HOME  &none     &kp ESC
-          &trans      &kp LCTRL  &kp EQUAL    &kp N4 &kp N5 &kp N6      &kp PG_DN &kp LEFT &kp DOWN  &kp RIGHT &kp END   &kp CAPS
-          &trans      &kp LSHFT  &kp KP_N0    &kp N1 &kp N2 &kp N3      &none     &none    &kp COMMA &kp DOT   &kp FSLH  &kp LCMD
+          &trans      &kp LSHFT  &kp EQUAL    &kp N4 &kp N5 &kp N6      &kp PG_DN &kp LEFT &kp DOWN  &kp RIGHT &kp END   &kp CAPS
+          &trans      &kp LCTRL  &kp KP_N0    &kp N1 &kp N2 &kp N3      &none     &none    &kp COMMA &kp DOT   &kp FSLH  &kp LCMD
                                                &trans &trans &kp RET  &kp RET  &trans &trans
                         >;
                 };
