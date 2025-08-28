@@ -77,16 +77,16 @@
                 numbers_layer {
                         label = "NUMBR";
 // -----------------------------------------------------------------------------------------
-// | -v- | CONFG | GRV  |  7  |  8  |  9  |  /  |   | PGUP| ___ |  UP | ___ | HOME| ___ | ESC |
-//       | -v-   | CTRL |  4  |  5  |  6  |  =  |   | PGDN| LEFT| DOWN| RGHT| END | CAPS |
-//       | -v-   | SHFT |  1  |  2  |  3  |  0  |   | ___ | ___ | ,/< | ./> |  -  |   +  |
+// | -v- | CONFG | LALT |  +  |  7  |  8  |  9  |   | PGUP| ___ |  UP | ___ | HOME| ___  | ESC |
+//       | -v-   | CTRL |  =  |  4  |  5  |  6  |   | PGDN| LEFT| DOWN| RGHT| END | CAPS |
+//       | -v-   | SHFT |  0  |  1  |  2  |  3  |   | ___ | ___ | ,/< | ./> |  /  | LCMD |
 //                            | -v- | -v- | RET |   | RET | -v- | -v- |
 
                         bindings = <
-   &trans &tog CONFIG &kp GRAVE    &kp N7 &kp N8 &kp N9 &kp FSLH        &kp PG_UP &none    &kp UP    &none     &kp HOME  &none          &kp ESC
-          &trans      &kp LCTRL    &kp N4 &kp N5 &kp N6 &kp EQUAL       &kp PG_DN &kp LEFT &kp DOWN  &kp RIGHT &kp END   &kp CAPS
-          &trans      &kp LSHFT    &kp N1 &kp N2 &kp N3 &kp KP_N0       &none     &none    &kp COMMA &kp DOT   &kp MINUS &kp KP_PLUS
-                                         &trans &trans &kp RET   &kp RET  &trans &trans
+   &trans &tog CONFIG &kp LALT   &kp KP_PLUS  &kp N7 &kp N8 &kp N9      &kp PG_UP &none    &kp UP    &none     &kp HOME  &none     &kp ESC
+          &trans      &kp LCTRL  &kp EQUAL    &kp N4 &kp N5 &kp N6      &kp PG_DN &kp LEFT &kp DOWN  &kp RIGHT &kp END   &kp CAPS
+          &trans      &kp LSHFT  &kp KP_N0    &kp N1 &kp N2 &kp N3      &none     &none    &kp COMMA &kp DOT   &kp FLSH &kp LCMD
+                                               &trans &trans &kp RET  &kp RET  &trans &trans
                         >;
                 };
                 symbols_layer {
@@ -95,13 +95,13 @@
 // | -v- | CONFG |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  [  |  ]  |  ˜  | ESC |
 //       |  -v-  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |  -  |
 //       |  -v-  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |  _  |
-//                           | -v- | -v- | RET |   |CONFG| -v- | -v- |
+//                           | -v- | -v- | RET |   |MOUSE| -v- | -v- |
 
                         bindings = <
-   &trans &tog CONFIG &kp F1   &kp F2 &kp F3   &kp F4   &kp F5             &kp F6    &kp F7   &kp F8   &kp LBKT &kp RBKT &kp TILDE      &kp ESC
-          &trans      &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT          &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp MINUS
-          &trans      &kp N1   &kp N2 &kp N3   &kp N4   &kp N5             &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &kp UNDERSCORE
-                                               &trans &trans &kp RET   &mo CONFIG &trans &trans
+   &trans &tog CONFIG &kp F1   &kp F2 &kp F3   &kp F4   &kp F5            &kp F6    &kp F7   &kp F8   &kp LBKT &kp RBKT &kp TILDE      &kp ESC
+          &trans      &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT         &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp MINUS
+          &trans      &kp N1   &kp N2 &kp N3   &kp N4   &kp N5            &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &kp UNDERSCORE
+                                               &trans &trans &kp RET   &mo MOUSE    &trans &trans
                         >;
                 };
                 mouse_layer {
@@ -122,15 +122,15 @@
                 config_layer {
                         label = "CONFG";
 // -----------------------------------------------------------------------------------------
-// | -v- | -v- | QWERTY |SYMBOLS |HOMEMODMAC | GAMING  |VALORANT |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         |         |  BLDR   | RST |
-//       | -v- |        |        | OUT_BLE   | OUT_TOG | OUT_USB |   |      RGB_ON      |      RGB_OFF      |       RGB_TOG        | RGB_SPI | RGB_SPD |  RGB_EFF |
-//       | -v- |        | BT0    | BT1       | BT2     | BTCLR   |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  | BL_DEC  |
+// | -v- | -v- | QWERTY |SYMBOLS |HOMEMODMAC | GAMING  |VALORANT |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         | ZMK_STUDIO |  BLDR   | RST |
+//       | -v- |        | MOUSE  | OUT_BLE   | OUT_TOG | OUT_USB |   |      RGB_ON      |      RGB_OFF      |       RGB_TOG        | RGB_SPI |   RGB_SPD  |  RGB_EFF |
+//       | -v- |        | BT0    | BT1       | BT2     | BTCLR   |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  |   BL_DEC   |
 //                               | -v-       | -v-     | -v-     |   | -v- | -v- | -v- |
 
                         bindings = <
-   &trans &trans  &to QWERTY &to SYMBOLS  &to HOMEMODMAC &to GAMING   &to VALORANT      &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &none         &none         &bootloader  &sys_reset
-          &trans  &none       &none         &out OUT_BLE    &out OUT_TOG  &out OUT_USB       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
-          &trans  &none       &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_CLR         &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC    &bl BL_DEC    &none
+   &trans &trans  &to QWERTY  &to SYMBOLS   &to HOMEMODMAC  &to GAMING    &to VALORANT       &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &studio_unlock   &none            &bootloader      &sys_reset
+          &trans  &none       &to MOUSE     &out OUT_BLE    &out OUT_TOG  &out OUT_USB       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
+          &trans  &none       &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &bt BT_CLR         &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
                                                               &trans &trans &trans   &trans &trans &trans
                         >;
                 };
