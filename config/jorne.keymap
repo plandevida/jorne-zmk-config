@@ -107,14 +107,14 @@
                 mouse_layer {
                         label = "MOUSE";
 // -----------------------------------------------------------------------------------------
-// | -v- | CONFG | ___ | ___ | ___ | ___ | ___ |   |   SCRL_UP  | SCRL_LEFT  |   MOVE_UP  | SCRL_RIGHT  | ___ | ___ | ___ |
-//       |  -v-  | ___ | ___ | ___ | ___ | ___ |   | SCRL_DOWN  | MOVE_LEFT  | MOVE_DOWN  | MOVE_RIGHT  | ___ | ___ |
+// | -v- | CONFG | ___ | ___ | ___ | ___ | ___ |   | SCRL_DOWN | SCRL_LEFT  |   MOVE_UP  | SCRL_RIGHT  | ___ | ___ | ___ |
+//       |  -v-  | ___ | ___ | ___ | ___ | ___ |   |  SCRL_UP  | MOVE_LEFT  | MOVE_DOWN  | MOVE_RIGHT  | ___ | ___ |
 //       |  -v-  | ___ | ___ | ___ | ___ | ___ |   | ___  | ___ | ___ | ___ | ___ | -v- |
 //                           | -v- | -v- | LCLK |   |RCLK| -v- | -v- |
 
                         bindings = <
-   &trans &tog CONFIG &none &none &none &none &none         &msc SCRL_UP   &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none &none &none
-          &trans      &none &none &none &none &none         &msc SCRL_DOWN &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
+   &trans &tog CONFIG &none &none &none &none &none         &msc SCRL_DOWN &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none &none &none
+          &trans      &none &none &none &none &none         &msc SCRL_UP   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
           &trans      &none &none &none &none &none         &none &none          &none          &none           &none &none
                                 &trans &trans &mkp LCLK    &mkp RCLK &trans &trans
                         >;
