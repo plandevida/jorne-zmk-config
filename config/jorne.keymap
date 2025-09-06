@@ -61,6 +61,8 @@
                                                          &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
+
+
                 thumbsmac_layer {
                         label = "THUMBS";
 // | LALT-TAB | CONFG |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [  |  RALT-]  |
@@ -70,10 +72,12 @@
                         bindings = <
    &hm LALT TAB   &mo CONFIG    &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LBKT     &hm RALT RBKT
                   &mo SYMBOLS   &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SQT
-                  &mo NUMBER    &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
+                  &mo NUMBERS   &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
                                         &hm LCTRL DEL   &hm LSHFT SPACE   &hm LCMD RET        &hm RCMD RET   &hm RSHFT SPACE   &hm RCTRL BSPC
                         >;
                 };
+
+
                 querty_layer {
                         label = "QWRTY";
 // -----------------------------------------------------------------------------------------
@@ -88,6 +92,8 @@
                         &lt MOUSE DEL &lt NUMBERS SPACE &kp RET  &kp RET &lt NUMBERS SPACE &kp BSPC
                         >;
                 };
+
+
                 numbers_layer {
                         label = "NUMBR";
 // -----------------------------------------------------------------------------------------
@@ -103,6 +109,8 @@
                                                &trans &trans &kp RET  &kp RET  &trans &trans
                         >;
                 };
+
+
                 symbols_layer {
                         label = "SYMBL";
 // -----------------------------------------------------------------------------------------
@@ -118,6 +126,8 @@
                                                &trans &trans &kp RET   &tog MOUSE    &trans &trans
                         >;
                 };
+
+
                 mouse_layer {
                         label = "MOUSE";
 // -----------------------------------------------------------------------------------------
@@ -133,6 +143,8 @@
                                 &trans &trans &mkp LCLK    &mkp RCLK &trans &trans
                         >;
                 };
+
+
                 config_layer {
                         label = "CONFG";
 // -----------------------------------------------------------------------------------------
@@ -148,6 +160,8 @@
                                                                   &trans &trans &trans   &trans &trans &trans
                         >;
                 };
+
+
                 valorant_layer {
                         label = "VLRNT";
 // -----------------------------------------------------------------------------------------
@@ -163,6 +177,8 @@
                                             &kp M &kp SPACE &kp V  &kp RET &lt NUMBERS SPACE &kp BSPC
                         >;
                 };
+
+
                 gaming_layer {
                         label = "GAMING";
 // -----------------------------------------------------------------------------------------
