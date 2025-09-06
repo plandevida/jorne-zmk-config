@@ -149,14 +149,14 @@
                         label = "CONFG";
 // -----------------------------------------------------------------------------------------
 // | -v- | -v- | HOMEMODMAC | NUMBERS |  SYMBOLS  |  MOUSE  | QWERTY  |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         | ZMK_STUDIO |  BLDR   | RST |
-//       | -v- |   GAMING   |   ___   | OUT_BLE   | OUT_TOG | OUT_USB |   |      RGB_ON      |      RGB_OFF      |       RGB_TOG        | RGB_SPI |   RGB_SPD  |  RGB_EFF |
+//       | -v- |   THUMBSMAC   |   ___   | OUT_BLE   | OUT_TOG | OUT_USB |   |      RGB_ON      |      RGB_OFF      |       RGB_TOG        | RGB_SPI |   RGB_SPD  |  RGB_EFF |
 //       | -v- |  VALORANT  | BT0     | BT1       | BT2     | BTCLR   |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  |   BL_DEC   |
 //                               | -v-       | -v-     | -v-     |   | -v- | -v- | -v- |
 
                         bindings = <
-   &trans &trans  &to HOMEMODMAC &to NUMBERS  &to SYMBOLS  &to MOUSE     &to QWERTY         &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &studio_unlock   &none            &bootloader      &sys_reset
-          &trans  &to GAMING     &none        &out OUT_BLE &out OUT_USB  &out OUT_TOG       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
-          &trans  &to VALORANT   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR         &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
+   &trans &trans  &to HOMEMODMAC   &to NUMBERS  &to SYMBOLS  &to MOUSE     &to QWERTY         &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &studio_unlock   &none            &bootloader      &sys_reset
+          &trans  &to THUMBSMAC    &none        &out OUT_BLE &out OUT_USB  &out OUT_TOG       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
+          &trans  &none            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR         &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
                                                                   &trans &trans &trans   &trans &trans &trans
                         >;
                 };
