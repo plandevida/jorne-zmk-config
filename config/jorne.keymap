@@ -14,13 +14,14 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define HOMEMODMAC 0
-#define QWERTY 1
-#define NUMBERS 2
-#define SYMBOLS 3
-#define MOUSE 4
-#define CONFIG 5
-#define VALORANT 6
-#define GAMING 7
+#define THUMBSMAC 1
+#define QWERTY 2
+#define NUMBERS 3
+#define SYMBOLS 4
+#define MOUSE 5
+#define CONFIG 6
+#define VALORANT 7
+#define GAMING 8
 
 / {
         behaviors {
@@ -29,7 +30,7 @@
                         #binding-cells = <2>;
                         tapping_term_ms = <300>;
                         quick-tap-ms = <200>;
-                        require-prior-idle-ms = <160>;
+                        require-prior-idle-ms = <170>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                 };
@@ -60,6 +61,21 @@
                                                          &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
+
+                thumbsmac_layer {
+                        label = "THUMBS";
+// | LALT-TAB | CONFG |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [  |  RALT-]  |
+//            | SYMBS |  A     |    S   |    D   |    F   |  G  |             |  H  |    J   |    K   |    L   |    ;   |  '  |
+//            | NUMBS |  Z     |    X   |    C   |    V   |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \  |
+//                               | LCTRL-DEL | LSFT-SPC | LCMD-RET |      | RCMD-RET | RSTF-SPC | RCTRL-BKSP |
+                        bindings = <
+   &hm LALT TAB   &mo CONFIG    &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LBKT     &hm RALT RBKT
+                  &mo SYMBOLS   &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SQT
+                  &mo NUMBER    &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
+                                        &hm LCTRL DEL   &hm LSFT SPACE   &hm LCMD RET        &hm RCMD RET   &hm RSFT SPACE   &hm RCTRL BSPC
+                        >;
+                };
+
                 querty_layer {
                         label = "QWRTY";
 // -----------------------------------------------------------------------------------------
