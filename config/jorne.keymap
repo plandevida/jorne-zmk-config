@@ -71,7 +71,7 @@
    &hm LALT TAB   &mo CONFIG    &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LBKT     &hm RALT RBKT
                   &mo SYMBOLS   &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SQT
                   &mo NUMBER    &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
-                                        &hm LCTRL DEL   &hm LSFT SPACE   &hm LCMD RET        &hm RCMD RET   &hm RSFT SPACE   &hm RCTRL BSPC
+                                        &hm LCTRL DEL   &hm LSHFT SPACE   &hm LCMD RET        &hm RCMD RET   &hm RSHFT SPACE   &hm RCTRL BSPC
                         >;
                 };
                 querty_layer {
