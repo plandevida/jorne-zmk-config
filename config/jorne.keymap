@@ -61,7 +61,6 @@
                                                          &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
-
                 thumbsmac_layer {
                         label = "THUMBS";
 // | LALT-TAB | CONFG |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [  |  RALT-]  |
@@ -75,7 +74,6 @@
                                         &hm LCTRL DEL   &hm LSFT SPACE   &hm LCMD RET        &hm RCMD RET   &hm RSFT SPACE   &hm RCTRL BSPC
                         >;
                 };
-
                 querty_layer {
                         label = "QWRTY";
 // -----------------------------------------------------------------------------------------
