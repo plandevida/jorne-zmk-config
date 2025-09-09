@@ -51,7 +51,7 @@
                 td_config_mouse: tap_dance_0 {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <0>;
-                    tapping-term-ms = <120>;
+                    tapping-term-ms = <280>;
                     bindings = <&mo CONFIG>, <&tog MOUSE>;
                 };
         };
@@ -76,10 +76,10 @@
 
                 thumbsmac_layer {
                         label = "THUMBS";
-// | LALT-TAB | CONFG |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |   [   |  RALT-]  |
-//            | SYMBS |  A     |    S   |    D   |    F   |  G  |             |  H  |    J   |    K   |    L   |    ;   |   '   |
-//            | NUMBS |  Z     |    X   |    C   |    V   |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \/|  |
-//                               | LCTRL-DEL | LSFT-SPC | LCMD-RET |      | RCMD-RET | RSTF-SPC | RCTRL-BKSP |
+// | LALT-TAB | CONFG/MOUSE |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |   [   |  RALT-]  |
+//            |    SYMBS    |  A     |    S   |    D   |    F   |  G  |             |  H  |    J   |    K   |    L   |    ;   |   '   |
+//            |    NUMBS    |  Z     |    X   |    C   |    V   |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \/|  |
+//                                     | LCTRL-DEL | LSFT-SPC | LCMD-RET |      | RCMD-RET | RSTF-SPC | RCTRL-BKSP |
                         bindings = <
    &hm LALT TAB   &td_config_mouse  &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &hm RALT RIGHT_BRACKET
                   &mo SYMBOLSTWO    &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
@@ -108,10 +108,10 @@
                 numbers_layer {
                         label = "NUMBR";
 // -----------------------------------------------------------------------------------------
-// | -v- | CONFG | LALT |  7  |  8  |  9  | +/= |   | PGUP| ___ |  UP | ___ | HOME| ___  | ESC |
-//       | -v-   | SHFT |  4  |  5  |  6  | -/_ |   | PGDN| LEFT| DOWN| RGHT| END | CAPS |
-//       | -v-   | CTRL |  1  |  2  |  3  |  0  |   | ___ | ___ | ,/< | ./> |  /  | LCMD |
-//                            | -v- | -v- | RET |   | RET | -v- | -v- |
+// | -v- | CONFG | LALT |  7  |  8  |  9  | +/= |       | PGUP| ___ |  UP | ___ | HOME| ___  | ESC |
+//       | -v-   | SHFT |  4  |  5  |  6  | -/_ |       | PGDN| LEFT| DOWN| RGHT| END | CAPS |
+//       | -v-   | CTRL |  1  |  2  |  3  |  0  |       | ___ | ___ | ,/< | ./> |  /  | LCMD |
+//                              | -v- | -v- | RET |   | RET | -v- | -v- |
 
                         bindings = <
    &trans &tog CONFIG &kp LALT   &kp N7 &kp N8 &kp N9 &kp EQUAL          &kp PG_UP &none    &kp UP    &none     &kp HOME  &none     &kp ESC
@@ -125,10 +125,10 @@
                 symbols_layer {
                         label = "SYMBL";
 // -----------------------------------------------------------------------------------------
-// | -v- | CONFG |  F1 |  F2 |  F3 |  F4 |  F5 |   |  F6 |  F7 |  F8 |  [  |  ]  |  GRAVE | ESC |
-//       |  -v-  |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |   -    |
-//       |  -v-  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |   _    |
-//                           | -v- | -v- | RET |   |MOUSE| -v- | -v- |
+// | -v- | CONFG |  F1 |  F2 |  F3 |  F4 |  F5 |       |  F6 |  F7 |  F8 |  [  |  ]  |  GRAVE | ESC |
+//       |  -v-  |  !  |  @  |  #  |  $  |  %  |       |  ^  |  &  |  *  |  (  |  )  |   -    |
+//       |  -v-  |  1  |  2  |  3  |  4  |  5  |       |  6  |  7  |  8  |  9  |  0  |   _    |
+//                             | -v- | -v- | RET |   | MOUSE | -v- | -v- |
 
                         bindings = <
    &trans &tog CONFIG &kp F1   &kp F2 &kp F3   &kp F4   &kp F5            &kp F6    &kp F7   &kp F8   &kp LBKT &kp RBKT &kp GRAVE       &kp ESC
@@ -142,16 +142,16 @@
                 symbolstwo_layer {
                         label = "SYMBLv2";
 // -----------------------------------------------------------------------------------------
-// | -v- | CONFG |  LALT |  7  |  8  |  9  |     |       |  !  |  @  |  #  |  $  | -/_ | GRAVE | ESC |
-//       |  -v-  |  SHFT |  4  |  5  |  6  |     |       |  %  |  ^  |  &  |  *  |  (  |   )   |
-//       |  -v-  |  CTRL |  1  |  2  |  3  |  0  |       |  '  |  "  |  <  |  >  | [/{ |  ]/}  |
-//                           | -v- | -v- | RET |   |MOUSE| -v- | -v- |
+// | -v- | CONFG/MOUSE |  LALT |  7  |  8  |  9  |     |       |  !  |  @  |  #  |  $  | -/_ | GRAVE | ESC |
+//       |     -v-     |  SHFT |  4  |  5  |  6  |     |       |  %  |  ^  |  &  |  *  |  (  |   )   |
+//       |     -v-     |  CTRL |  1  |  2  |  3  |  0  |       |  '  |  "  |  <  |  >  | [/{ |  ]/}  |
+//                                     | -v- | -v- | RET |   | MOUSE | -v- | -v- |
 
                         bindings = <
-   &trans  &tog CONFIG  &kp LALT   &kp N7  &kp N8  &kp N9  &none          &kp EXCL   &kp AT     &kp HASH       &kp DLLR          &kp MINUS  &kp GRAVE  &kp ESC
-           &trans       &kp LSHFT  &kp N4  &kp N5  &kp N6  &none          &kp PRCNT  &kp CARET  &kp AMPS       &kp STAR          &kp LPAR   &kp RPAR 
-           &trans       &kp LCTRL  &kp N1  &kp N2  &kp N3  &kp N0         &kp SQT    &kp DQT    &kp LESS_THAN  &kp GREATER_THAN  &kp LBKT   &kp RBKT
-                                             &trans  &trans  &kp RET   &tog MOUSE  &trans  &trans
+   &trans  &td_config_mouse  &kp LALT   &kp N7  &kp N8  &kp N9  &none          &kp EXCL   &kp AT     &kp HASH       &kp DLLR          &kp MINUS  &kp GRAVE  &kp ESC
+           &trans            &kp LSHFT  &kp N4  &kp N5  &kp N6  &none          &kp PRCNT  &kp CARET  &kp AMPS       &kp STAR          &kp LPAR   &kp RPAR 
+           &trans            &kp LCTRL  &kp N1  &kp N2  &kp N3  &kp N0         &kp SQT    &kp DQT    &kp LESS_THAN  &kp GREATER_THAN  &kp LBKT   &kp RBKT
+                                                  &trans  &trans  &kp RET   &tog MOUSE  &trans  &trans
                         >;
                 };
  
