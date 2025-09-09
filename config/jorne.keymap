@@ -48,11 +48,11 @@
                         display-name = "Copy-Paste-Mod";
                 };
 
-                td_layer_mo_tog: tap_dance_0 {
+                td_config_mouse: tap_dance_0 {
                     compatible = "zmk,behavior-tap-dance";
-                    #binding-cells = <2>;
+                    #binding-cells = <0>;
                     tapping-term-ms = <120>;
-                    bindings = <&mo>, <&tog>;
+                    bindings = <&mo CONFIG>, <&tog MOUSE>;
                 };
         };
 
@@ -81,9 +81,9 @@
 //            | NUMBS |  Z     |    X   |    C   |    V   |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \/|  |
 //                               | LCTRL-DEL | LSFT-SPC | LCMD-RET |      | RCMD-RET | RSTF-SPC | RCTRL-BKSP |
                         bindings = <
-   &hm LALT TAB   &td_layer_mo_tog CONFIG MOUSE       &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &hm RALT RIGHT_BRACKET
-                  &mo SYMBOLSTWO   &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
-                  &mo NUMBERS      &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
+   &hm LALT TAB   &td_config_mouse  &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &hm RALT RIGHT_BRACKET
+                  &mo SYMBOLSTWO    &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
+                  &mo NUMBERS       &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
                                         &hm LCTRL DEL   &hm LSHFT SPACE   &hm LCMD RET        &hm RCMD RET   &hm RSHFT SPACE   &hm RCTRL BSPC
                         >;
                 };
