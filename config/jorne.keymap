@@ -36,6 +36,7 @@
                         bindings = <&kp>, <&kp>;
                         display-name = "Home-Mod";
                 };
+
                 cpx: copypastecut {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
@@ -46,6 +47,7 @@
                         bindings = <&kp>, <&kp>;
                         display-name = "Copy-Paste-Mod";
                 };
+
                 td_layer_mo_tog: tap_dance_0 {
                     compatible = "zmk,behavior-tap-dance";
                     #binding-cells = <2>;
@@ -137,8 +139,7 @@
                 };
 
 
-
-                symbols_layer {
+                symbolstwo_layer {
                         label = "SYMBLv2";
 // -----------------------------------------------------------------------------------------
 // | -v- | CONFG |  LALT |  7  |  8  |  9  |     |       |  !  |  @  |  #  |  $  | -/_ | GRAVE | ESC |
@@ -153,6 +154,7 @@
                                              &trans  &trans  &kp RET   &tog MOUSE  &trans  &trans
                         >;
                 };
+ 
 
                 mouse_layer {
                         label = "MOUSE";
