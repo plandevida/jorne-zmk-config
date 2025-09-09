@@ -18,10 +18,11 @@
 #define QWERTY 2
 #define NUMBERS 3
 #define SYMBOLS 4
-#define MOUSE 5
-#define CONFIG 6
-#define VALORANT 7
-#define GAMING 8
+#define SYMBOLSTWO 5
+#define MOUSE 6
+#define CONFIG 7
+#define VALORANT 8
+#define GAMING 9
 
 / {
         behaviors {
@@ -30,9 +31,10 @@
                         #binding-cells = <2>;
                         tapping_term_ms = <300>;
                         quick-tap-ms = <200>;
-                        require-prior-idle-ms = <170>;
+                        require-prior-idle-ms = <125>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
+                        display-name = "Home-Mod";
                 };
                 cpx: copypastecut {
                         compatible = "zmk,behavior-hold-tap";
@@ -42,6 +44,13 @@
                         require-prior-idle-ms = <170>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
+                        display-name = "Copy-Paste-Mod";
+                };
+                td_layer_mo_tog: tap_dance_0 {
+                    compatible = "zmk,behavior-tap-dance";
+                    #binding-cells = <2>;
+                    tapping-term-ms = <120>;
+                    bindings = <&mo>, <&tog>;
                 };
         };
 
@@ -55,9 +64,9 @@
 //       | SYMBL |  Z     | CUT/X  | COPY/C | PSTE/V |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \  |
 //                                            | DEL | SPC | RET |  | RET | SPC | BKSP |
                         bindings = <
-   &kp TAB &mo CONFIG  &kp Q        &kp W        &kp E        &kp R         &kp T  &kp Y &kp U       &kp I       &kp O       &kp P           &kp LBKT &kp RBKT
-           &mo NUMBERS &hm LSHFT A  &hm LCTRL S  &hm LALT D   &hm LCMD F    &kp G  &kp H &hm RCMD J  &hm RALT K  &hm RCTRL L &hm RSHFT SEMI &kp SQT
-           &mo SYMBOLS &kp Z        &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V   &kp B  &kp N &kp M       &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
+   &kp TAB &mo CONFIG  &kp Q        &kp W        &kp E        &kp R         &kp T  &kp Y &kp U       &kp I       &kp O       &kp P            &kp LEFT_BRACKET    &kp RIGHT_BRACKET
+           &mo NUMBERS &hm LSHFT A  &hm LCTRL S  &hm LALT D   &hm LCMD F    &kp G  &kp H &hm RCMD J  &hm RALT K  &hm RCTRL L &hm RSHFT SEMI   &kp SQT
+           &mo SYMBOLSTWO &kp Z        &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V   &kp B  &kp N &kp M       &kp COMMA   &kp DOT     &kp FSLH      &kp BSLH
                                                          &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
@@ -65,14 +74,14 @@
 
                 thumbsmac_layer {
                         label = "THUMBS";
-// | LALT-TAB | CONFG |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [  |  RALT-]  |
-//            | SYMBS |  A     |    S   |    D   |    F   |  G  |             |  H  |    J   |    K   |    L   |    ;   |  '  |
-//            | NUMBS |  Z     |    X   |    C   |    V   |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \  |
+// | LALT-TAB | CONFG |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |   [   |  RALT-]  |
+//            | SYMBS |  A     |    S   |    D   |    F   |  G  |             |  H  |    J   |    K   |    L   |    ;   |   '   |
+//            | NUMBS |  Z     |    X   |    C   |    V   |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \/|  |
 //                               | LCTRL-DEL | LSFT-SPC | LCMD-RET |      | RCMD-RET | RSTF-SPC | RCTRL-BKSP |
                         bindings = <
-   &hm LALT TAB   &mo CONFIG    &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LBKT     &hm RALT RBKT
-                  &mo SYMBOLS   &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SQT
-                  &mo NUMBERS   &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BSLH
+   &hm LALT TAB   &td_layer_mo_tog CONFIG MOUSE       &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &hm RALT RIGHT_BRACKET
+                  &mo SYMBOLSTWO   &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
+                  &mo NUMBERS      &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
                                         &hm LCTRL DEL   &hm LSHFT SPACE   &hm LCMD RET        &hm RCMD RET   &hm RSHFT SPACE   &hm RCTRL BSPC
                         >;
                 };
@@ -97,16 +106,16 @@
                 numbers_layer {
                         label = "NUMBR";
 // -----------------------------------------------------------------------------------------
-// | -v- | CONFG | LALT |  7  |  8  |  9  |  +  |   | PGUP| ___ |  UP | ___ | HOME| ___  | ESC |
-//       | -v-   | SHFT |  4  |  5  |  6  |  =  |   | PGDN| LEFT| DOWN| RGHT| END | CAPS |
+// | -v- | CONFG | LALT |  7  |  8  |  9  | +/= |   | PGUP| ___ |  UP | ___ | HOME| ___  | ESC |
+//       | -v-   | SHFT |  4  |  5  |  6  | -/_ |   | PGDN| LEFT| DOWN| RGHT| END | CAPS |
 //       | -v-   | CTRL |  1  |  2  |  3  |  0  |   | ___ | ___ | ,/< | ./> |  /  | LCMD |
 //                            | -v- | -v- | RET |   | RET | -v- | -v- |
 
                         bindings = <
-   &trans &tog CONFIG &kp LALT   &kp N7 &kp N8 &kp N9 &kp KP_PLUS        &kp PG_UP &none    &kp UP    &none     &kp HOME  &none     &kp ESC
-          &trans      &kp LSHFT  &kp N4 &kp N5 &kp N6 &kp EQUAL          &kp PG_DN &kp LEFT &kp DOWN  &kp RIGHT &kp END   &kp CAPS
-          &trans      &kp LCTRL  &kp N1 &kp N2 &kp N3 &kp KP_N0          &none     &none    &kp COMMA &kp DOT   &kp FSLH  &kp LCMD
-                                               &trans &trans &kp RET  &kp RET  &trans &trans
+   &trans &tog CONFIG &kp LALT   &kp N7 &kp N8 &kp N9 &kp EQUAL          &kp PG_UP &none    &kp UP    &none     &kp HOME  &none     &kp ESC
+          &trans      &kp LSHFT  &kp N4 &kp N5 &kp N6 &kp MINUS          &kp PG_DN &kp LEFT &kp DOWN  &kp RIGHT &kp END   &caps_word
+          &trans      &kp LCTRL  &kp N1 &kp N2 &kp N3 &kp N0             &none     &none    &kp COMMA &kp DOT   &kp FSLH  &kp LCMD
+                                             &trans &trans &kp RET    &kp RET  &trans &trans
                         >;
                 };
 
@@ -128,18 +137,35 @@
                 };
 
 
+
+                symbols_layer {
+                        label = "SYMBLv2";
+// -----------------------------------------------------------------------------------------
+// | -v- | CONFG |  LALT |  7  |  8  |  9  |     |       |  !  |  @  |  #  |  $  | -/_ | GRAVE | ESC |
+//       |  -v-  |  SHFT |  4  |  5  |  6  |     |       |  %  |  ^  |  &  |  *  |  (  |   )   |
+//       |  -v-  |  CTRL |  1  |  2  |  3  |  0  |       |  '  |  "  |  <  |  >  | [/{ |  ]/}  |
+//                           | -v- | -v- | RET |   |MOUSE| -v- | -v- |
+
+                        bindings = <
+   &trans  &tog CONFIG  &kp LALT   &kp N7  &kp N8  &kp N9  &none          &kp EXCL   &kp AT     &kp HASH       &kp DLLR          &MINUS    &kp GRAVE  &kp ESC
+           &trans       &kp LSHFT  &kp N4  &kp N5  &kp N6  &none          &kp PRCNT  &kp CARET  &kp AMPS       &kp STAR          &kp LPAR  &kp RPAR 
+           &trans       &kp LCTRL  &kp N1  &kp N2  &kp N3  &kp N0         &kp SQT    &kp DQT    &kp LESS_THAN  &kp GREATER_THAN  &kp LBKT  &kp RBKT
+                                             &trans  &trans  &kp RET   &tog MOUSE  &trans  &trans
+                        >;
+                };
+
                 mouse_layer {
                         label = "MOUSE";
 // -----------------------------------------------------------------------------------------
-// | -v- | CONFG | ___ | ___ | ___ | ___ | ___ |   | SCRL_DOWN | SCRL_LEFT  |   MOVE_UP  | SCRL_RIGHT  | ___ | ___ | ___ |
-//       |  -v-  | ___ | ___ | ___ | ___ | ___ |   |  SCRL_UP  | MOVE_LEFT  | MOVE_DOWN  | MOVE_RIGHT  | ___ | ___ |
-//       |  -v-  | ___ | ___ | ___ | ___ | ___ |   | ___  | ___ | ___ | ___ | ___ | -v- |
+// | -v- | CONFG | LALT | ___ | ___ | ___ | ___ |   | SCRL_DOWN | SCRL_LEFT  |   MOVE_UP  | SCRL_RIGHT  | ___ | ___ | ___ |
+//       |  -v-  | SHFT | ___ | ___ | ___ | ___ |   |  SCRL_UP  | MOVE_LEFT  | MOVE_DOWN  | MOVE_RIGHT  | ___ | ___ |
+//       |  -v-  | CTRL | ___ | ___ | ___ | ___ |   |    ___    |     ___    |    ___     |     ___     | ___ | -v- |
 //                           | -v- | -v- | LCLK |   |RCLK| -v- | -v- |
 
                         bindings = <
-   &trans &tog CONFIG &none &none &none &none &none         &msc SCRL_DOWN &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none &none &none
-          &trans      &none &none &none &none &none         &msc SCRL_UP   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
-          &trans      &none &none &none &none &none         &none &none          &none          &none           &none &none
+   &trans &tog CONFIG &kp LALT  &none &none &none &none         &msc SCRL_DOWN &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none &none &none
+          &trans      &kp LSHFT &none &none &none &none         &msc SCRL_UP   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
+          &trans      &kp LCTRL &none &none &none &none         &none &none          &none          &none           &none &none
                                 &trans &trans &mkp LCLK    &mkp RCLK &trans &trans
                         >;
                 };
@@ -148,9 +174,9 @@
                 config_layer {
                         label = "CONFG";
 // -----------------------------------------------------------------------------------------
-// | -v- | -v- | HOMEMODMAC | NUMBERS |  SYMBOLS  |  MOUSE  | QWERTY  |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         | ZMK_STUDIO |  BLDR   | RST |
-//       | -v- |   THUMBSMAC   |   ___   | OUT_BLE   | OUT_TOG | OUT_USB |   |      RGB_ON      |      RGB_OFF      |       RGB_TOG        | RGB_SPI |   RGB_SPD  |  RGB_EFF |
-//       | -v- |  VALORANT  | BT0     | BT1       | BT2     | BTCLR   |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  |   BL_DEC   |
+// | -v- | -v- | HOMEMODMAC | NUMBERS |  SYMBOLS  |  MOUSE  | QWERTY  |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         | ZMK_STUDIO |  BLDR    | RST |
+//       | -v- |   THUMBSMAC   |   ___   | OUT_BLE   | OUT_TOG | OUT_USB |   |      RGB_ON      |      RGB_OFF      |       RGB_OG      | RGB_SPI |   RGB_SPD  |  RGB_EFF |
+//       | -v- |  VALORANT  | BT0     | BT1       | BT2     | BTCLR   |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  |   BL_DEC   |    ___   |
 //                               | -v-       | -v-     | -v-     |   | -v- | -v- | -v- |
 
                         bindings = <
