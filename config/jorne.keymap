@@ -142,13 +142,13 @@
                 symbolstwo_layer {
                         label = "SYMBLv2";
 // -----------------------------------------------------------------------------------------
-// | -v- | CONFG/MOUSE |  LALT |  7  |  8  |  9  |     |       |  !  |  @  |  #  |  $  | -/_ | GRAVE | ESC |
-//       |     -v-     |  SHFT |  4  |  5  |  6  |     |       |  %  |  ^  |  &  |  *  |  (  |   )   |
-//       |     -v-     |  CTRL |  1  |  2  |  3  |  0  |       |  '  |  "  |  <  |  >  | [/{ |  ]/}  |
+// | -v- | CONFG/MOUSE |  LALT |  7  |  8  |  9  |     |       |  !  |  @  |  #  |  $  | -/_ | +/= | GRAVE |
+//       |     -v-     |  SHFT |  4  |  5  |  6  |     |       |  %  |  ^  |  &  |  *  |  (  |  )  |
+//       |     -v-     |  CTRL |  1  |  2  |  3  |  0  |       |  '  |  "  |  <  |  >  | [/{ | ]/} |
 //                                     | -v- | -v- | RET |   | MOUSE | -v- | -v- |
 
                         bindings = <
-   &trans  &td_config_mouse  &kp LALT   &kp N7  &kp N8  &kp N9  &none          &kp EXCL   &kp AT     &kp HASH       &kp DLLR          &kp MINUS  &kp GRAVE  &kp ESC
+   &trans  &td_config_mouse  &kp LALT   &kp N7  &kp N8  &kp N9  &none          &kp EXCL   &kp AT     &kp HASH       &kp DLLR          &kp MINUS  &kp EQUAL  &kp GRAVE
            &trans            &kp LSHFT  &kp N4  &kp N5  &kp N6  &none          &kp PRCNT  &kp CARET  &kp AMPS       &kp STAR          &kp LPAR   &kp RPAR 
            &trans            &kp LCTRL  &kp N1  &kp N2  &kp N3  &kp N0         &kp SQT    &kp DQT    &kp LESS_THAN  &kp GREATER_THAN  &kp LBKT   &kp RBKT
                                                   &trans  &trans  &kp RET   &tog MOUSE  &trans  &trans
