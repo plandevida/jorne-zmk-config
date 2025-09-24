@@ -101,8 +101,8 @@
 //                                     | LCTRL-DEL | LSFT-SPC | LCMD-RET |      | RCMD-RET | RSTF-SPC | RCTRL-BKSP |
                         bindings = <
    &hm LALT TAB   &td_config_mouse  &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &hm RALT RIGHT_BRACKET
-                  &mo SYMBOLSTWO    &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
-                  &mo NUMBERS       &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
+                  &mo SYMBOLSTHREE  &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
+                  &to MOUSE         &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
                                         &hm LCTRL DEL   &hm LSHFT SPACE   &hm LCMD RET        &hm RCMD RET   &hm RSHFT SPACE   &hm RCTRL BSPC
                         >;
                 };
@@ -115,9 +115,9 @@
 //       | SYMBL |  Z     | CUT/X  | COPY/C | PSTE/V |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \  |
 //                                            | DEL | SPC | RET |  | RET | SPC | BKSP |
                         bindings = <
-   &kp TAB &mo CONFIG  &kp Q        &kp W        &kp E        &kp R         &kp T  &kp Y &kp U       &kp I       &kp O       &kp P            &kp LEFT_BRACKET    &kp RIGHT_BRACKET
-           &mo NUMBERS &hm LSHFT A  &hm LCTRL S  &hm LALT D   &hm LCMD F    &kp G  &kp H &hm RCMD J  &hm RALT K  &hm RCTRL L &hm RSHFT SEMI   &kp SQT
-           &mo SYMBOLSTWO &kp Z        &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V   &kp B  &kp N &kp M       &kp COMMA   &kp DOT     &kp FSLH      &kp BSLH
+   &kp TAB &mo CONFIG        &kp Q        &kp W        &kp E          &kp R          &kp T  &kp Y &kp U       &kp I       &kp O       &kp P            &kp LEFT_BRACKET    &kp RIGHT_BRACKET
+           &mo NUMBERS       &hm LSHFT A  &hm LCTRL S  &hm LALT D     &hm LCMD F     &kp G  &kp H &hm RCMD J  &hm RALT K  &hm RCTRL L &hm RSHFT SEMI   &kp SQT
+           &mo SYMBOLSTHREE  &kp Z        &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V   &kp B  &kp N &kp M       &kp COMMA   &kp DOT     &kp FSLH         &kp BSLH
                                                          &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
@@ -211,16 +211,16 @@
                 config_layer {
                         label = "CONFG";
 // -----------------------------------------------------------------------------------------
-// | -v- | -v- | THUMBSMAC  | NUMBERS |  SYMBOLS  |  MOUSE  | QWERTY  |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         | ZMK_STUDIO |  BLDR    | RST |
-//       | -v- | HOMEMODMAC |   ___   | OUT_BLE   | OUT_TOG | OUT_USB |   |      RGB_ON      |      RGB_OFF      |       RGB_OG      | RGB_SPI |   RGB_SPD  |  RGB_EFF |
-//       | -v- |  VALORANT  | BT0     | BT1       | BT2     | BTCLR   |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  |   BL_DEC   |    ___   |
-//                               | -v-       | -v-     | -v-     |   | -v- | -v- | -v- |
+// | -v- | -v- |  THUMBSMAC   | NUMBERS      |  SYMBOLS  |  MOUSE  | HOMEMODMAC |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         | ZMK_STUDIO |  BLDR    | RST |
+//       | -v- | SYMBOLSTWO   | SYMBOLSTHREE | OUT_BLE   | OUT_TOG |  OUT_USB   |   |      RGB_ON      |      RGB_OFF      |       RGB_OG      | RGB_SPI |   RGB_SPD  |  RGB_EFF |
+//       | -v- |  VALORANT    | BT0          | BT1       | BT2     | BTCLR      |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  |   BL_DEC   |    ___   |
+//                                              | -v-       | -v-     | -v-     |   | -v- | -v- | -v- |
 
                         bindings = <
-   &trans &trans  &to THUMBSMAC    &to NUMBERS  &to SYMBOLS  &to MOUSE     &to HOMEMODMAC         &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &studio_unlock   &none            &bootloader      &sys_reset
-          &trans  &none            &none        &out OUT_BLE &out OUT_USB  &out OUT_TOG       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
-          &trans  &none            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_CLR         &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
-                                                                  &trans &trans &trans   &trans &trans &trans
+   &trans &trans  &to THUMBSMAC    &to NUMBERS       &to SYMBOLS   &to MOUSE     &to HOMEMODMAC     &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &studio_unlock   &none            &bootloader      &sys_reset
+          &trans  &to SYMBOLSTWO   &to SYMBOLSTHREE  &out OUT_BLE  &out OUT_USB  &out OUT_TOG       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
+          &trans  &none            &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR         &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
+                                                                           &trans &trans &trans   &trans &trans &trans
                         >;
                 };
 
