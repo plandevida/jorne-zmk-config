@@ -57,18 +57,18 @@
                 };
 
                 // on tap 7, on ctrl+tap UP
-                seventctrlup: seven_ctrl_up {
+                eightctrlup: seven_ctrl_up {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp N7>, <&kp UP>;
+                        bindings = <&kp N8>, <&kp UP>;
                         mods = <(MOD_LCTRL|MOD_RCTRL)>;
                 };
 
-                // on tap ^, on ctrl+tap LEFT
-                caretctrlleft: caret_ctrl_left {
+                // on tap (, on ctrl+tap LEFT
+                lparctrlleft: lpar_ctrl_left {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp CARET>, <&kp LEFT>;
+                        bindings = <&kp LPAR>, <&kp LEFT>;
                         mods = <(MOD_LCTRL|MOD_RCTRL)>;
                 };
 
@@ -80,44 +80,44 @@
                         mods = <(MOD_LCTRL|MOD_RCTRL)>;
                 };
 
-                // on tap *, on ctrl+tap RIGHT
-                startctrlright: star_ctrl_right {
+                // on tap (, on ctrl+tap RIGHT
+                rparctrlright: rpar_ctrl_right {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp STAR>, <&kp RIGHT>;
+                        bindings = <&kp RPAR>, <&kp RIGHT>;
                         mods = <(MOD_LCTRL|MOD_RCTRL)>;
                 };
 
 
-                // on tap 5, on ctrl+tap PGUP
-                fivectrlpgup: five_ctrl_pgup {
+                // on tap 6, on ctrl+tap PGUP
+                sixctrlpgup: six_ctrl_pgup {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp N5>, <&kp PG_UP>;
+                        bindings = <&kp N6>, <&kp PG_UP>;
                         mods = <(MOD_LCTRL|MOD_RCTRL)>;
                 };
 
-                // on tap PERCENTAGE, on ctrl+tap PDOWN
-                percentagectrlpgdn: five_ctrl_pgup {
+                // on tap ^, on ctrl+tap PDOWN
+                caretctrlpgdn: caret_ctrl_pgup {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp PRCNT>, <&kp PG_DN>;
+                        bindings = <&kp CARET>, <&kp PG_DN>;
                         mods = <(MOD_LCTRL|MOD_RCTRL)>;
                 };
 
-                // on tap 6, on ctrl+tap HOME
-                sixctrlhome: six_ctrl_home {
+                // on tap 7, on ctrl+tap HOME
+                sevenctrlhome: seven_ctrl_home {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp N6>, <&kp HOME>;
+                        bindings = <&kp N7>, <&kp HOME>;
                         mods = <(MOD_LCTRL|MOD_RCTRL)>;
                 };
 
-                // on tap 8, on ctrl+tap END
-                eightctrlend: eight_ctrl_end {
+                // on tap 9, on ctrl+tap END
+                ninectrlend: nine_ctrl_end {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp N8>, <&kp END>;
+                        bindings = <&kp N9>, <&kp END>;
                         mods = <(MOD_LCTRL|MOD_RCTRL)>;
                 };
         };
@@ -210,16 +210,16 @@
                 symbolsthree_layer {
                         label = "SYMBLv3";
 // -------------------------------------------JORNE--SYMBOLSv3----------------------------------------------
-// | -v- | CONFG/MOUSE |  LALT |  1  |  2  |  3  |  4  |       | 5/PGUP | 6/HOME |  7/UP  |  8/END  |  9  |  0  | ESC |
-//       |     -v-     |  SHFT |  !  |  @  |  #  |  $  |       | %/PGDN | ^/LEFT | &/DOWN | */RIGHT |  (  |  )  |
-//       |     -v-     |  CTRL |     |     |     |     |       |   +/=  |  -/_   |   ,/<  |   ./>   | [/{ | ]/} |
-//                          | LCTRL-DEL | LSFT-SPC | RET |   | RET | RSTF-SPC | RCTRL-BKSP |     
+// | TAB | CONFG/MOUSE |  1  |  2  |  3  |  4  |  5  |       | 6/PGUP | 7/HOME |  8/UP  |  9/END  |  0  | [/{  | ESC |
+//       |     -v-     |  !  |  @  |  #  |  $  |  %  |       | ^/PGDN | &/LEFT | */DOWN | (/RIGHT |  )  | ]/} |
+//       |     -v-     |     |     |     |     |     |       |   -/_  |  +/=   |   ,/<  |   ./>   |     |     |
+//                      | LCTRL-DEL | LSFT-SPC | RET |   | RET | RSTF-SPC | RCTRL-BKSP |     
 
                         bindings = <
-   &trans  &td_config_mouse  &kp LALT   &kp N1    &kp N2  &kp N3    &kp N4         &fivectrlpgup         &sixctrlhome    &seventctrlup       &keightctrlend   &kp N9     &kp N0    &kp ESC
-           &trans            &kp LSHFT  &kp EXCL  &kp AT  &kp HASH  &kp DLLR       &percentagectrlpgdn   &caretctrlleft  &ampersandctrldown  &startctrlright  &kp LPAR   &kp RPAR 
-           &trans            &kp LCTRL  &none     &none   &none     &none          &kp EQUAL             &kp MINUS       &kp COMMA           &kp DOT          &kp LBKT   &kp RBKT
-                                      &hm LCTRL DEL  &hm LSHFT SPACE  &kp RET   &kp RET  &hm RSHFT SPACE   &hm RCTRL BSPC
+   &kp TAB   &td_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N9     &kp LBKT    &kp ESC
+             &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &lparctrlleft   &ampersandctrldown  &rparctrlright   &kp RPAR   &kp RBKT 
+             &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &none
+                                        &hm LCTRL DEL  &hm LSHFT SPACE  &kp RET   &kp RET  &hm RSHFT SPACE   &hm RCTRL BSPC
                         >;
                 };
  
