@@ -57,42 +57,34 @@
                 };
 
                 // on tap 7, on shift+tap UP
-                // seventshiftup: seven_shift_up {
-                //         compatible = "zmk,behavior-mod-morph";
-                //         #binding-cells = <0>;
-                //         bindings = <&kp N7>, <&kp UP>;
-                //         mods = <(MOD_LSFT|MOD_RSFT)>;
-                // };
+                seventshiftup: seven_shift_up {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp N7>, <&kp UP>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
 
                 // // on tap ^, on shift+tap LEFT
-                // caretshiftleft: caret_shift_left {
-                //         compatible = "zmk,behavior-mod-morph";
-                //         #binding-cells = <0>;
-                //         bindings = <&kp CARET>, <&kp LEFT>;
-                //         mods = <(MOD_LSFT|MOD_RSFT)>;
-                // };
+                caretshiftleft: caret_shift_left {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp CARET>, <&kp LEFT>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
 
                 // // on tap &, on shift+tap DOWN
-                // ampersandshiftdown: ampersand_shift_down {
-                //         compatible = "zmk,behavior-mod-morph";
-                //         #binding-cells = <0>;
-                //         bindings = <&kp AMP>, <&kp DOWN>;
-                //         mods = <(MOD_LSFT|MOD_RSFT)>;
-                // };
+                ampersandshiftdown: ampersand_shift_down {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp AMP>, <&kp DOWN>;
+                        mods = <(MOD_LSFT|MOD_RSFT)>;
+                };
 
                 // // on tap *, on shift+tap RIGHT
-                // startshiftright: startshiftright {
-                //         compatible = "zmk,behavior-mod-morph";
-                //         #binding-cells = <0>;
-                //         bindings = <&kp STAR>, <&kp RIGHT>;
-                //         mods = <(MOD_LSFT|MOD_RSFT)>;
-                // };
-
-                // generic mod-morph for keys that have a shifted function
-                genshiftmorph: generic_shift_morph {
+                startshiftright: startshiftright {
                         compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <2>;
-                        bindings = <&kp>, <&kp>;
+                        #binding-cells = <0>;
+                        bindings = <&kp STAR>, <&kp RIGHT>;
                         mods = <(MOD_LSFT|MOD_RSFT)>;
                 };
         };
@@ -103,7 +95,7 @@
 
                 thumbsmac_layer {
                         label = "THUMBS";
-// | LALT-TAB | CONFG/MOUSE |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |   [   |  RALT-]  |
+// | LALT-TAB | CONFG/MOUSE |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [/{  | RALT-]/} |
 //            |    SYMBS    |  A     |    S   |    D   |    F   |  G  |             |  H  |    J   |    K   |    L   |    ;   |   '   |
 //            |    NUMBS    |  Z     |    X   |    C   |    V   |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \/|  |
 //                                     | LCTRL-DEL | LSFT-SPC | LCMD-RET |      | RCMD-RET | RSTF-SPC | RCTRL-BKSP |
@@ -185,15 +177,15 @@
                 symbolsthree_layer {
                         label = "SYMBLv3";
 // -------------------------------------------JORNE--SYMBOLSv3----------------------------------------------
-// | -v- | CONFG/MOUSE |  LALT |  1  |  2  |  3  |  4  |       |  5  |  6  |  7  |  8  |  9  |  0  | ESC |
-//       |     -v-     |  SHFT |  !  |  @  |  #  |  $  |       |  %  |  ^  |  &  |  *  |  (  |  )  |
-//       |     -v-     |  CTRL |     |     |     |     |       | +/= | -/_ |  <  |  >  | [/{ | ]/} |
+// | -v- | CONFG/MOUSE |  LALT |  1  |  2  |  3  |  4  |       |  5  |   6    |  7/UP  |    8    |  9  |  0  | ESC |
+//       |     -v-     |  SHFT |  !  |  @  |  #  |  $  |       |  %  | ^/LEFT | &/DOWN | */RIGHT |  (  |  )  |
+//       |     -v-     |  CTRL |     |     |     |     |       | +/= |  -/_   |   ,/<  |   ./>   | [/{ | ]/} |
 //                          | LCTRL-DEL | LSFT-SPC | RET |   | RET | RSTF-SPC | RCTRL-BKSP |     
 
                         bindings = <
-   &trans  &td_config_mouse  &kp LALT   &kp N1    &kp N2  &kp N3    &kp N4         &kp N5     &kp N6     &genshiftmorph N7 UP   &kp N8            &kp N9     &kp N0    &kp ESC
-           &trans            &kp LSHFT  &kp EXCL  &kp AT  &kp HASH  &kp DLLR       &kp PRCNT  &kp CARET  &kp AMPS               &kp STAR          &kp LPAR   &kp RPAR 
-           &trans            &kp LCTRL  &none     &none   &none     &none          &kp EQUAL  &kp MINUS  &kp LESS_THAN          &kp GREATER_THAN  &kp LBKT   &kp RBKT
+   &trans  &td_config_mouse  &kp LALT   &kp N1    &kp N2  &kp N3    &kp N4         &kp N5     &kp N6           &seventshiftup        &kp N8            &kp N9     &kp N0    &kp ESC
+           &trans            &kp LSHFT  &kp EXCL  &kp AT  &kp HASH  &kp DLLR       &kp PRCNT  &caretshiftleft  &ampersandshiftdown   &startshiftright  &kp LPAR   &kp RPAR 
+           &trans            &kp LCTRL  &none     &none   &none     &none          &kp EQUAL  &kp MINUS        &kp COMMA             &kp DOT  &kp LBKT   &kp RBKT
                               &hm LCTRL DEL  &hm LSHFT SPACE  &kp RET   &kp RET  &hm RSHFT SPACE   &hm RCTRL BSPC
                         >;
                 };
