@@ -214,16 +214,10 @@
 //       |     -v-     |     |     |     |     |     |       |   -/_  |  +/=   |   ,/<  |   ./>   |     |     |
 //                      | LCTRL-DEL | LSFT-SPC | RET |   | RET | RSTF-SPC | RCTRL-BKSP |     
 
-//                         bindings = <
-//    &kp TAB   &td_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N9     &kp LBKT    &kp ESC
-//              &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &lparctrlleft   &ampersandctrldown  &rparctrlright  &kp RPAR   &kp RBKT 
-//              &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &none
-//                                         &hm LCTRL DEL  &hm LSHFT SPACE  &kp RET   &kp RET  &hm RSHFT SPACE   &hm RCTRL BSPC
-//                         >;
                         bindings = <
-   &kp TAB   &td_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &none           &none        &none        &none    &kp N9     &kp LBKT    &kp ESC
-             &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &none           &none        &none        &none    &kp RPAR   &kp RBKT 
-             &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL    &kp COMMA    &kp DOT  &none      &none
+   &kp TAB   &td_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N9     &kp LBKT    &kp ESC
+             &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &lparctrlleft   &ampersandctrldown  &rparctrlright  &kp RPAR   &kp RBKT 
+             &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &none
                                         &hm LCTRL DEL  &hm LSHFT SPACE  &kp RET   &kp RET  &hm RSHFT SPACE   &hm RCTRL BSPC
                         >;
                 };
