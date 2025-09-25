@@ -191,9 +191,9 @@
 //       | -v- |  VALORANT    | BT0          | BT1       | BT2     | BTCLR      |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  |   BL_DEC   |    ___   |
 //                                              | -v-       | -v-     | -v-     |   | -v- | -v- | -v- |
                         bindings = <
-   &trans &trans  &to THUMBSMAC    &to NUMBERS       &to SYMBOLS   &to MOUSE     &to HOMEMODMAC     &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &studio_unlock   &none            &bootloader      &sys_reset
-          &trans  &none            &none             &out OUT_BLE  &out OUT_USB  &out OUT_TOG       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
-          &trans  &none            &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR         &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
+   &trans &trans  &to THUMBSMAC    &to NUMBERS    &to SYMBOLS   &to NUMBERS   &to MOUSE          &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &studio_unlock   &none            &bootloader      &sys_reset
+          &trans  &none            &none          &out OUT_BLE  &out OUT_USB  &out OUT_TOG       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
+          &trans  &none            &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR         &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
                                                                            &trans &trans &trans   &trans &trans &trans
                         >;
                 };
