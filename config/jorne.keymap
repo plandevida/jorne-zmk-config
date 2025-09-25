@@ -14,15 +14,10 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define THUMBSMAC 0
-#define HOMEMODMAC 1
-#define NUMBERS 2
-#define SYMBOLS 3
-#define SYMBOLSTWO 4
-#define SYMBOLSTHREE 5
-#define MOUSE 6
-#define CONFIG 7
-#define VALORANT 8
-#define GAMING 9
+#define NUMBERS 1
+#define SYMBOLS 2
+#define MOUSE 3
+#define CONFIG 4
 
 / {
         behaviors {
@@ -81,10 +76,10 @@
                 };
 
                 // on tap (, on ctrl+tap RIGHT
-                rparctrlright: rpar_ctrl_right {
+                lparctrlright: lpar_ctrl_right {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
-                        bindings = <&kp RPAR>, <&kp RIGHT>;
+                        bindings = <&kp LPAR>, <&kp RIGHT>;
                         mods = <(MOD_LCTL|MOD_RCTL)>;
                 };
 
@@ -134,23 +129,8 @@
                         bindings = <
    &hm LALT TAB   &td_config_mouse  &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &hm RALT RIGHT_BRACKET
                   &mo SYMBOLSTHREE  &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
-                  &to MOUSE         &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
+                  &none             &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
                                         &hm LCTRL DEL   &hm LSHFT SPACE   &hm LCMD RET        &hm RCMD RET   &hm RSHFT SPACE   &hm RCTRL BSPC
-                        >;
-                };
-
-
-                homemodmac_layer {
-                        label = "HMMAC";
-// | TAB | CONFG |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [  |  ]  |
-//       | NUM   | LSFT/A | LCTR/S | LALT/D | LCMD/F |  G  |             |  H  | RCMD/J | RALT/K | RCTR/L | RSFT/; |  '  |
-//       | SYMBL |  Z     | CUT/X  | COPY/C | PSTE/V |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \  |
-//                                            | DEL | SPC | RET |  | RET | SPC | BKSP |
-                        bindings = <
-   &kp TAB &mo CONFIG        &kp Q        &kp W        &kp E          &kp R          &kp T  &kp Y &kp U       &kp I       &kp O       &kp P            &kp LEFT_BRACKET    &kp RIGHT_BRACKET
-           &mo NUMBERS       &hm LSHFT A  &hm LCTRL S  &hm LALT D     &hm LCMD F     &kp G  &kp H &hm RCMD J  &hm RALT K  &hm RCTRL L &hm RSHFT SEMI   &kp SQT
-           &mo SYMBOLSTHREE  &kp Z        &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V   &kp B  &kp N &kp M       &kp COMMA   &kp DOT     &kp FSLH         &kp BSLH
-                                                         &kp DEL &kp SPACE &kp RET  &kp RET &kp SPACE &kp BSPC
                         >;
                 };
 
@@ -162,7 +142,6 @@
 //       | -v-   | SHFT |  4  |  5  |  6  | -/_ |       | PGDN| LEFT| DOWN| RGHT| END | CAPS |
 //       | -v-   | CTRL |  1  |  2  |  3  |  0  |       | ___ | ___ | ,/< | ./> |  /  | LCMD |
 //                              | -v- | -v- | RET |   | RET | -v- | -v- |
-
                         bindings = <
    &trans &tog CONFIG &kp LALT   &kp N7 &kp N8 &kp N9 &kp EQUAL          &kp PG_UP &none    &kp UP    &none     &kp HOME  &none     &kp ESC
           &trans      &kp LSHFT  &kp N4 &kp N5 &kp N6 &kp MINUS          &kp PG_DN &kp LEFT &kp DOWN  &kp RIGHT &kp END   &caps_word
@@ -173,51 +152,16 @@
 
 
                 symbols_layer {
-                        label = "SYMBL";
-// -----------------------------------------------------------------------------------------
-// | -v- | CONFG |  F1 |  F2 |  F3 |  F4 |  F5 |       |  F6 |  F7 |  F8 |  [  |  ]  |  GRAVE | ESC |
-//       |  -v-  |  !  |  @  |  #  |  $  |  %  |       |  ^  |  &  |  *  |  (  |  )  |   -    |
-//       |  -v-  |  1  |  2  |  3  |  4  |  5  |       |  6  |  7  |  8  |  9  |  0  |   _    |
-//                             | -v- | -v- | RET |   | MOUSE | -v- | -v- |
-
-                        bindings = <
-   &trans &tog CONFIG &kp F1   &kp F2 &kp F3   &kp F4   &kp F5            &kp F6    &kp F7   &kp F8   &kp LBKT &kp RBKT &kp GRAVE       &kp ESC
-          &trans      &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT         &kp CARET &kp AMPS &kp STAR &kp LPAR &kp RPAR &kp MINUS
-          &trans      &kp N1   &kp N2 &kp N3   &kp N4   &kp N5            &kp N6    &kp N7   &kp N8   &kp N9   &kp N0   &kp UNDERSCORE
-                                               &trans &trans &kp RET   &tog MOUSE    &trans &trans
-                        >;
-                };
-
-
-                symbolstwo_layer {
-                        label = "SYMBLv2";
-// -------------------------------------------JORNE--SYMBOLSv2----------------------------------------------
-// | -v- | CONFG/MOUSE |  LALT |  7  |  8  |  9  |     |       |  !  |  @  |  #  |  $  | -/_ | +/= | GRAVE |
-//       |     -v-     |  SHFT |  4  |  5  |  6  |     |       |  %  |  ^  |  &  |  *  |  (  |  )  |
-//       |     -v-     |  CTRL |  1  |  2  |  3  |  0  |       |  '  |  "  |  <  |  >  | [/{ | ]/} |
-//                                     | -v- | -v- | RET |   | MOUSE | -v- | -v- |
-
-                        bindings = <
-   &trans  &td_config_mouse  &kp LALT   &kp N7  &kp N8  &kp N9  &none          &kp EXCL   &kp AT     &kp HASH       &kp DLLR          &kp MINUS  &kp EQUAL  &kp GRAVE
-           &trans            &kp LSHFT  &kp N4  &kp N5  &kp N6  &none          &kp PRCNT  &kp CARET  &kp AMPS       &kp STAR          &kp LPAR   &kp RPAR 
-           &trans            &kp LCTRL  &kp N1  &kp N2  &kp N3  &kp N0         &kp SQT    &kp DQT    &kp LESS_THAN  &kp GREATER_THAN  &kp LBKT   &kp RBKT
-                                                  &trans  &trans  &kp RET   &tog MOUSE  &trans  &trans
-                        >;
-                };
-
-
-                symbolsthree_layer {
                         label = "SYMBLv3";
 // -------------------------------------------JORNE--SYMBOLSv3----------------------------------------------
 // | TAB | CONFG/MOUSE |  1  |  2  |  3  |  4  |  5  |       | 6/PGUP | 7/HOME |  8/UP  |  9/END  |  0  | [/{  | ESC |
 //       |     -v-     |  !  |  @  |  #  |  $  |  %  |       | ^/PGDN | &/LEFT | */DOWN | (/RIGHT |  )  | ]/} |
-//       |     -v-     |     |     |     |     |     |       |   -/_  |  +/=   |   ,/<  |   ./>   |     |     |
+//       |     -v-     |     |     |     |     |     |       |   -/_  |  +/=   |   ,/<  |   ./>   |     | `/~ |
 //                      | LCTRL-DEL | LSFT-SPC | RET |   | RET | RSTF-SPC | RCTRL-BKSP |     
-
                         bindings = <
    &kp TAB   &td_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N9     &kp LBKT    &kp ESC
              &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &lparctrlleft   &ampersandctrldown  &rparctrlright  &kp RPAR   &kp RBKT 
-             &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &none
+             &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &kp GRAVE
                                         &hm LCTRL DEL  &hm LSHFT SPACE  &kp RET   &kp RET  &hm RSHFT SPACE   &hm RCTRL BSPC
                         >;
                 };
@@ -230,7 +174,6 @@
 //       |  -v-  | SHFT | ___ | ___ | ___ |  SCRL_UP  |   |  SCRL_UP  | MOVE_LEFT  | MOVE_DOWN  | MOVE_RIGHT  | ___ | ___ |
 //       |  -v-  | CTRL | ___ | ___ | ___ |    ___    |   |    ___    |     ___    |    ___     |     ___     | ___ | -v- |
 //                                 | -v- | -v- | LCLK |   |RCLK| -v- | -v- |
-
                         bindings = <
    &trans &tog CONFIG &kp LALT  &none &none &none &msc SCRL_DOWN         &msc SCRL_DOWN &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none &none &none
           &trans      &kp LSHFT &none &none &none &msc SCRL_UP           &msc SCRL_UP   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
@@ -247,46 +190,11 @@
 //       | -v- | SYMBOLSTWO   | SYMBOLSTHREE | OUT_BLE   | OUT_TOG |  OUT_USB   |   |      RGB_ON      |      RGB_OFF      |       RGB_OG      | RGB_SPI |   RGB_SPD  |  RGB_EFF |
 //       | -v- |  VALORANT    | BT0          | BT1       | BT2     | BTCLR      |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  |   BL_DEC   |    ___   |
 //                                              | -v-       | -v-     | -v-     |   | -v- | -v- | -v- |
-
                         bindings = <
    &trans &trans  &to THUMBSMAC    &to NUMBERS       &to SYMBOLS   &to MOUSE     &to HOMEMODMAC     &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &studio_unlock   &none            &bootloader      &sys_reset
-          &trans  &to SYMBOLSTWO   &to SYMBOLSTHREE  &out OUT_BLE  &out OUT_USB  &out OUT_TOG       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
+          &trans  &none            &none             &out OUT_BLE  &out OUT_USB  &out OUT_TOG       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
           &trans  &none            &bt BT_SEL 0      &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR         &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
                                                                            &trans &trans &trans   &trans &trans &trans
-                        >;
-                };
-
-
-                valorant_layer {
-                        label = "VLRNT";
-// -----------------------------------------------------------------------------------------
-// | NUM | TAB  |  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  [  |  ]  |
-//       | CTRL |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '  |
-//       | SHFT |  Z  |  X  |  C  |  V  |  B  |         |  N  |  M   |  ,  |  .  |  /  |  \  |
-//                             |  M  | SPC |  V  |   | RET | NUM/SPC | BKSP |
-
-                        bindings = <
-   &tog NUMBERS &kp TAB   &kp Q &kp W &kp E &kp R &kp T &kp Y           &kp U  &kp I     &kp O   &kp P    &kp LBKT  &kp RBKT
-                &kp LSHFT &kp A &kp S &kp D &kp F &kp G &kp H           &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LCTRL &kp Z &kp X &kp C &kp V &kp B &kp N           &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                                            &kp M &kp SPACE &kp V  &kp RET &lt NUMBERS SPACE &kp BSPC
-                        >;
-                };
-
-
-                gaming_layer {
-                        label = "GAMING";
-// -----------------------------------------------------------------------------------------
-// | NUM | TAB  |  Q  |  W  |  E  |  R  |  T  |         |  Y  |  U   |  I  |  O  |  P  |  [   |  ]  |
-//       | CTRL |  A  |  S  |  D  |  F  |  G  |         |  H  |  J   |  K  |  L  |  ;  |  '  |
-//       | SHFT |  Z  |  X  |  C  |  V  |  B  |         |  N  |  M   |  ,  |  .  |  /  |  \  |
-//                             | BSPC| SPC | RET |   | RET |  NUM/SPC | BKSP |
-
-                        bindings = <
-   &tog NUMBERS &kp TAB   &kp Q &kp W &kp E &kp R &kp T &kp Y           &kp U  &kp I     &kp O   &kp P    &kp LBKT  &kp RBKT
-                &kp LSHFT &kp A &kp S &kp D &kp F &kp G &kp H           &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-                &kp LCTRL &kp Z &kp X &kp C &kp V &kp B &kp N           &kp M  &kp COMMA &kp DOT &kp FSLH &kp BSLH
-                                        &kp BSPC &kp SPACE &kp RET  &kp RET &lt NUMBERS SPACE &kp BSPC
                         >;
                 };
         };
