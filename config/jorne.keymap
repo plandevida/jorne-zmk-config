@@ -57,12 +57,12 @@
                 };
 
                 // on tap 8, on ctrl+tap UP
-                // eightctrlup: eight_ctrl_up {
-                //         compatible = "zmk,behavior-mod-morph";
-                //         #binding-cells = <0>;
-                //         bindings = <&kp N8>, <&kp UP>;
-                //         mods = <(MOD_LCTRL|MOD_RCTRL)>;
-                // };
+                eightctrlup: eight_ctrl_up {
+                        compatible = "zmk,behavior-mod-morph";
+                        #binding-cells = <0>;
+                        bindings = <&kp N8>, <&kp UP>;
+                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                };
 
                 // // on tap (, on ctrl+tap LEFT
                 // lparctrlleft: lpar_ctrl_left {
