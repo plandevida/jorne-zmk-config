@@ -56,69 +56,69 @@
                         bindings = <&mo CONFIG>, <&tog MOUSE>;
                 };
 
-                // on tap 8, on ctrl+tap UP
-                eightctrlup: eight_ctrl_up {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp N8>, <&kp UP>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
-                };
+                // // on tap 8, on ctrl+tap UP
+                // eightctrlup: eight_ctrl_up {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp N8>, <&kp UP>;
+                //         mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                // };
 
-                // on tap (, on ctrl+tap LEFT
-                lparctrlleft: lpar_ctrl_left {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp LPAR>, <&kp LEFT>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
-                };
+                // // on tap (, on ctrl+tap LEFT
+                // lparctrlleft: lpar_ctrl_left {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp LPAR>, <&kp LEFT>;
+                //         mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                // };
 
-                // on tap &, on ctrl+tap DOWN
-                ampersandctrldown: ampersand_ctrl_down {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp AMPS>, <&kp DOWN>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
-                };
+                // // on tap &, on ctrl+tap DOWN
+                // ampersandctrldown: ampersand_ctrl_down {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp AMPS>, <&kp DOWN>;
+                //         mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                // };
 
-                // on tap (, on ctrl+tap RIGHT
-                rparctrlright: rpar_ctrl_right {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp RPAR>, <&kp RIGHT>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
-                };
+                // // on tap (, on ctrl+tap RIGHT
+                // rparctrlright: rpar_ctrl_right {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp RPAR>, <&kp RIGHT>;
+                //         mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                // };
 
-                // on tap 6, on ctrl+tap PGUP
-                sixctrlpgup: six_ctrl_pgup {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp N6>, <&kp PG_UP>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
-                };
+                // // on tap 6, on ctrl+tap PGUP
+                // sixctrlpgup: six_ctrl_pgup {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp N6>, <&kp PG_UP>;
+                //         mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                // };
 
-                // on tap ^, on ctrl+tap PDOWN
-                caretctrlpgdn: caret_ctrl_pgup {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp CARET>, <&kp PG_DN>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
-                };
+                // // on tap ^, on ctrl+tap PDOWN
+                // caretctrlpgdn: caret_ctrl_pgup {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp CARET>, <&kp PG_DN>;
+                //         mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                // };
 
-                // on tap 7, on ctrl+tap HOME
-                sevenctrlhome: seven_ctrl_home {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp N7>, <&kp HOME>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
-                };
+                // // on tap 7, on ctrl+tap HOME
+                // sevenctrlhome: seven_ctrl_home {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp N7>, <&kp HOME>;
+                //         mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                // };
 
-                // on tap 9, on ctrl+tap END
-                ninectrlend: nine_ctrl_end {
-                        compatible = "zmk,behavior-mod-morph";
-                        #binding-cells = <0>;
-                        bindings = <&kp N9>, <&kp END>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
-                };
+                // // on tap 9, on ctrl+tap END
+                // ninectrlend: nine_ctrl_end {
+                //         compatible = "zmk,behavior-mod-morph";
+                //         #binding-cells = <0>;
+                //         bindings = <&kp N9>, <&kp END>;
+                //         mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                // };
         };
 
         keymap {
@@ -214,10 +214,16 @@
 //       |     -v-     |     |     |     |     |     |       |   -/_  |  +/=   |   ,/<  |   ./>   |     |     |
 //                      | LCTRL-DEL | LSFT-SPC | RET |   | RET | RSTF-SPC | RCTRL-BKSP |     
 
+//                         bindings = <
+//    &kp TAB   &td_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N9     &kp LBKT    &kp ESC
+//              &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &lparctrlleft   &ampersandctrldown  &rparctrlright  &kp RPAR   &kp RBKT 
+//              &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &none
+//                                         &hm LCTRL DEL  &hm LSHFT SPACE  &kp RET   &kp RET  &hm RSHFT SPACE   &hm RCTRL BSPC
+//                         >;
                         bindings = <
-   &kp TAB   &td_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N9     &kp LBKT    &kp ESC
-             &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &lparctrlleft   &ampersandctrldown  &rparctrlright  &kp RPAR   &kp RBKT 
-             &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &none
+   &kp TAB   &td_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &none           &none        &none        &none    &kp N9     &kp LBKT    &kp ESC
+             &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &none           &none        &none        &none    &kp RPAR   &kp RBKT 
+             &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL    &kp COMMA.   &kp DOT  &none      &none
                                         &hm LCTRL DEL  &hm LSHFT SPACE  &kp RET   &kp RET  &hm RSHFT SPACE   &hm RCTRL BSPC
                         >;
                 };
