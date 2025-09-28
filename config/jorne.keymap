@@ -36,18 +36,33 @@
                         #binding-cells = <2>;
                         tapping_term_ms = <300>;
                         quick-tap-ms = <200>;
-                        require-prior-idle-ms = <170>;
+                        require-prior-idle-ms = <130>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                         display-name = "Copy-Paste-Mod";
                 };
 
                 // on tap CONFIG, on double tap MOUSE
-                td_config_mouse: config_mouse {
+                dt_config_mouse: config_mouse {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
                         tapping-term-ms = <280>;
                         bindings = <&mo CONFIG>, <&tog MOUSE>;
+                };
+
+                // on tap TAB, on double tap ESC and on hold LALT
+                dth_tab_esc_holdalt: double_tap_tab_esc_holdlalt {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <280>;
+                        bindings = <&mt LALT TAB>, <&kp ESC>;
+                };
+
+                dth_rbkt_esc_holdralt: double_tap_rbkt_esc_holdralt {
+                        compatible = "zmk,behavior-tap-dance";
+                        #binding-cells = <0>;
+                        tapping-term-ms = <280>;
+                        bindings = <&mt RALT RIGHT_BRACKET>, <&kp ESC>;
                 };
 
                 // on tap 8, on ctrl+tap UP
@@ -121,15 +136,15 @@
 
                 thumbsmac_layer {
                         label = "THUMBS";
-// | LALT-TAB | CONFG/MOUSE |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [/{  | RALT-]/} |
-//            |    SYMBS    |  A     |    S   |    D   |    F   |  G  |             |  H  |    J   |    K   |    L   |    ;   |   '   |
-//            |    NUMBS    |  Z     |    X   |    C   |    V   |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \/|  |
+// | LALT-TAB-ESC | CONFG/MOUSE |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [/{  | RALT-]/} |
+//                |    SYMBS    |  A     |    S   |    D   |    F   |  G  |             |  H  |    J   |    K   |    L   |    ;   |   '   |
+//                |    NUMBS    |  Z     |    X   |    C   |    V   |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \/|  |
 //                                     | LCTRL-DEL | LSFT-SPC | LCMD-RET |      | RCMD-RET | RSTF-SPC | RCTRL-BKSP |
                         bindings = <
-   &hm LALT TAB   &td_config_mouse  &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &hm RALT RIGHT_BRACKET
-                  &mo SYMBOLS       &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
-                  &none             &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
-                                        &hm LCTRL DEL   &hm LSHFT SPACE   &hm LCMD RET        &hm RCMD RET   &hm RSHFT SPACE   &hm RCTRL BSPC
+   &dth_tab_esc_holdalt   &dt_config_mouse  &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &dth_rbkt_esc_holdralt
+                          &mo SYMBOLS       &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
+                          &none             &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
+                                                 &mt LCTRL DEL   &mt LSHFT SPACE   &mt LCMD RET        &mt RCMD RET   &mt RSHFT SPACE   &mt RCTRL BSPC
                         >;
                 };
 
@@ -158,7 +173,7 @@
 //       |     -v-     |     |     |     |     |     |       |   -/_  |  +/=   |   ,/<  |   ./>   |     | `/~ |
 //                      | LCTRL-DEL | LSFT-SPC | RET |   | RET | RSTF-SPC | RCTRL-BKSP |     
                         bindings = <
-   &kp TAB   &td_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N0     &kp LBKT    &kp ESC
+   &kp TAB   &dt_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N0     &kp LBKT    &kp ESC
              &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &ampsctrlleft   &starandctrldown    &lparctrlright  &kp RPAR   &kp RBKT 
              &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &kp GRAVE
                                         &hm LCTRL DEL  &hm LSHFT SPACE  &kp RET   &kp RET  &hm RSHFT SPACE   &hm RCTRL BSPC
