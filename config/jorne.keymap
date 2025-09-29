@@ -24,19 +24,20 @@
                 hm: homerow_mod {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        tapping_term_ms = <300>;
-                        quick-tap-ms = <200>;
+                        tapping_term_ms = <280>;
+                        quick-tap-ms = <170>;
                         require-prior-idle-ms = <125>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                         display-name = "Home-Mod";
                 };
+
                 cpx: copypastecut {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
-                        tapping_term_ms = <300>;
-                        quick-tap-ms = <200>;
-                        require-prior-idle-ms = <130>;
+                        tapping_term_ms = <280>;
+                        quick-tap-ms = <170>;
+                        require-prior-idle-ms = <125>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                         display-name = "Copy-Paste-Mod";
@@ -46,7 +47,7 @@
                 dt_config_mouse: config_mouse {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <280>;
+                        tapping-term-ms = <150>;
                         bindings = <&mo CONFIG>, <&tog MOUSE>;
                 };
 
@@ -54,14 +55,14 @@
                 dth_tab_esc_holdalt: double_tap_tab_esc_holdlalt {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <280>;
+                        tapping-term-ms = <150>;
                         bindings = <&mt LALT TAB>, <&kp ESC>;
                 };
 
                 dth_rbkt_esc_holdralt: double_tap_rbkt_esc_holdralt {
                         compatible = "zmk,behavior-tap-dance";
                         #binding-cells = <0>;
-                        tapping-term-ms = <280>;
+                        tapping-term-ms = <150>;
                         bindings = <&mt RALT RIGHT_BRACKET>, <&kp ESC>;
                 };
 
@@ -176,7 +177,7 @@
    &kp TAB   &dt_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N0     &kp LBKT    &kp ESC
              &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &ampsctrlleft   &starandctrldown    &lparctrlright  &kp RPAR   &kp RBKT 
              &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &kp GRAVE
-                                        &hm LCTRL DEL  &hm LSHFT SPACE  &kp RET   &kp RET  &hm RSHFT SPACE   &hm RCTRL BSPC
+                                        &mt LCTRL DEL  &mt LSHFT SPACE  &kp RET   &kp RET  &mt RSHFT SPACE   &mt RCTRL BSPC
                         >;
                 };
  
