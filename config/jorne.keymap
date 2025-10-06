@@ -205,9 +205,9 @@
 //                |  -v-  |     |  (  |  )  | ] ø } | [ ø { |             |   -/_  |  +/=   |   ,/<  |   ./>   | / ∆ ? |  -v-  |
 //                                     |  -v-  |  -v-  |  -v-  |       |  -v-  |  -v-  |  -v-  |     
                         bindings = <
-   &thl CONFIG ESC   &trans  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N0     &trans   &thl CONFIG ESC
-                     &trans  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &ampsctrlleft   &starandctrldown    &lparctrlright  &kp RPAR   &trans
-                     &trans  &none     &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT         &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &kp FSLH   &trans
+   &thl CONFIG ESC   &trans  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5           &sixaltpgup     &sevenalthome  &eightaltup        &ninealtend     &kp N0     &trans   &thl CONFIG ESC
+                     &trans  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT        &caretaltpgdn   &ampsaltleft   &starandaltdown    &lparaltright   &kp RPAR   &trans
+                     &trans  &none     &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT         &kp MINUS       &kp EQUAL      &kp COMMA          &kp DOT         &kp FSLH   &trans
                                                         &trans  &trans  &trans      &trans  &trans  &trans
                         >;
                 };
