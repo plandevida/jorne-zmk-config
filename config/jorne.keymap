@@ -184,10 +184,10 @@
 //       | CTRL |  Z  |  X  |  C  |  V  |  B  |             |  N  |  M  |  , ø <  | . ø > | / ∆ ? | ¬CTRL ∆ \ ø | |
 //    | ¬LALT ∆ DEL | ¬SYBOLS ∆ SPC | LCMD ∆ RET |       | RCMD ∆ RET | ¬SYBOLS ∆ SPC | ¬RALT ∆ BKSP |
                         bindings = <
-   &kp ESC   &kp TAB    &kp Q       &kp W         &kp E         &kp R         &kp T               &kp Y      &kp U      &kp I       &kp O       &kp P      &kp GRAVE                 &kp ESC
-             &kp LSHFT  &kp A       &kp S         &kp D         &kp F         &kp G               &kp H      &kp J      &kp K       &kp L       &kp SEMI   &mth RSHFT SINGLE_QUOTE
-             &kp LCTRL  &cpx LG(Z)  &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V  &kp B               &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH   &mth RCTRL BACKSLASH
-                                                      &mth LALT DEL   &thl SYMBOLS SPACE   &mth LCMD RET    &mth RCMD RET   &thl SYMBOLS SPACE   &mth RALT BSPC
+   &kp ESC   &kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T               &kp Y      &kp U      &kp I       &kp O       &kp P      &kp GRAVE                 &kp ESC
+             &kp LSHFT  &kp A         &kp S         &kp D         &kp F         &kp G               &kp H      &kp J      &kp K       &kp L       &kp SEMI   &mth RSHFT SINGLE_QUOTE
+             &kp LCTRL  &cpx LG(Z) Z  &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V  &kp B               &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH   &mth RCTRL BACKSLASH
+                                                        &mth LALT DEL   &thl SYMBOLS SPACE   &mth LCMD RET    &mth RCMD RET   &thl SYMBOLS SPACE   &mth RALT BSPC
                         >;
                 };
 
@@ -221,7 +221,7 @@
    &dth_tab_esc_holdalt   &dt_config_mouse  &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &dth_rbkt_esc_holdralt
                           &mo SYMBOLS       &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
                           &none             &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
-                                              &mth LCTRL DEL   &mth LSHFT SPACE   &mth LCMD RET        &mth RCMD RET   &mth RSHFT SPACE   &mth RCTRL BSPC
+                                              &mth LCTRL DEL   &mth LSHFT SPACE  &mth LCMD RET        &mth RCMD RET   &mth RSHFT SPACE   &mth RCTRL BSPC
                         >;
                 };
 
