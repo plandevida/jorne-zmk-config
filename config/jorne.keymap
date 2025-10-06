@@ -21,6 +21,7 @@
 
 / {
         behaviors {
+                // Home rows mod
                 hm: homerow_mod {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
@@ -32,6 +33,7 @@
                         display-name = "Home-Mod";
                 };
 
+                // Mod on hold, key on tap (generic)
                 mth: mod_tap_hold {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
@@ -43,6 +45,7 @@
                         display-name = "Mod-Tap-Hold";
                 };
 
+                // Layer on hold, key on tap
                 thl: tap_hold_layer {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
@@ -54,6 +57,7 @@
                         display-name = "Tap-Hold-Layer";
                 };
 
+                // on tap key, on hold copy, paste, cut
                 cpx: copypastecut {
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
@@ -84,92 +88,93 @@
                 };
 
                 // on tap TAB, on double tap ESC and on hold LALT
-                dth_tab_esc_holdalt: double_tap_tab_esc_holdlalt {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <190>;
-                        bindings = <&mt LALT TAB>, <&kp ESC>;
-                        display-name = "Tab/Esc/LAlt";
-                };
+                // dth_tab_esc_holdalt: double_tap_tab_esc_holdlalt {
+                //         compatible = "zmk,behavior-tap-dance";
+                //         #binding-cells = <0>;
+                //         tapping-term-ms = <190>;
+                //         bindings = <&mt LALT TAB>, <&kp ESC>;
+                //         display-name = "Tab/Esc/LAlt";
+                // };
 
-                dth_rbkt_esc_holdralt: double_tap_rbkt_esc_holdralt {
-                        compatible = "zmk,behavior-tap-dance";
-                        #binding-cells = <0>;
-                        tapping-term-ms = <190>;
-                        bindings = <&mt RALT RIGHT_BRACKET>, <&kp ESC>;
-                        display-name = "RBrkt/Esc/RAlt";
-                };
+                // on tap RIGHT_BRACKET, on double tap ESC and on hold RALT
+                // dth_rbkt_esc_holdralt: double_tap_rbkt_esc_holdralt {
+                //         compatible = "zmk,behavior-tap-dance";
+                //         #binding-cells = <0>;
+                //         tapping-term-ms = <190>;
+                //         bindings = <&mt RALT RIGHT_BRACKET>, <&kp ESC>;
+                //         display-name = "RBrkt/Esc/RAlt";
+                // };
 
-                // on tap 8, on ctrl+tap UP
-                eightctrlup: eight_ctrl_up {
+                // on tap 8, on alt+tap UP
+                eightaltup: eight_alt_up {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N8>, <&kp UP>;
-                        mods = <(MOD_LCTL|MOD_RCTL)>;
-                        display-name = "8/Ctrl+Up";
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                        display-name = "8/Alt+Up";
                 };
 
-                // on tap &, on ctrl+tap LEFT
-                ampsctrlleft: amps_ctrl_left {
+                // on tap &, on alt+tap LEFT
+                ampsaltleft: amps_alt_left {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp AMPS>, <&kp LEFT>;
-                        mods = <(MOD_LCTL|MOD_RCTL)>;
-                        display-name = "&/Ctrl+Left";
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                        display-name = "&/Alt+Left";
                 };
 
-                // on tap *, on ctrl+tap DOWN
-                starandctrldown: star_ctrl_down {
+                // on tap *, on alt+tap DOWN
+                starandaltdown: star_alt_down {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp STAR>, <&kp DOWN>;
-                        mods = <(MOD_LCTL|MOD_RCTL)>;
-                        display-name = "*/Ctrl+Down";
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                        display-name = "*/Alt+Down";
                 };
 
-                // on tap (, on ctrl+tap RIGHT
-                lparctrlright: lpar_ctrl_right {
+                // on tap (, on alt+tap RIGHT
+                lparaltright: lpar_alt_right {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp LPAR>, <&kp RIGHT>;
-                        mods = <(MOD_LCTL|MOD_RCTL)>;
-                        display-name = "(/Ctrl+Right";
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                        display-name = "(/Alt+Right";
                 };
 
-                // on tap 6, on ctrl+tap PGUP
-                sixctrlpgup: six_ctrl_pgup {
+                // on tap 6, on alt+tap PGUP
+                sixaltpgup: six_alt_pgup {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N6>, <&kp PG_UP>;
-                        mods = <(MOD_LCTL|MOD_RCTL)>;
-                        display-name = "6/Ctrl+PgUp";
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                        display-name = "6/Alt+PgUp";
                 };
 
-                // on tap ^, on ctrl+tap PDOWN
-                caretctrlpgdn: caret_ctrl_pgup {
+                // on tap ^, on alt+tap PDOWN
+                caretaltpgdn: caret_alt_pgup {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp CARET>, <&kp PG_DN>;
-                        mods = <(MOD_LCTL|MOD_RCTL)>;
-                        display-name = "^/Ctrl+PgDn";
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                        display-name = "^/Alt+PgDn";
                 };
 
-                // on tap 7, on ctrl+tap HOME
-                sevenctrlhome: seven_ctrl_home {
+                // on tap 7, on alt+tap HOME
+                sevenalthome: seven_alt_home {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N7>, <&kp HOME>;
-                        mods = <(MOD_LCTL|MOD_RCTL)>;
-                        display-name = "7/Ctrl+Home";
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                        display-name = "7/Alt+Home";
                 };
 
-                // on tap 9, on ctrl+tap END
-                ninectrlend: nine_ctrl_end {
+                // on tap 9, on alt+tap END
+                ninealtend: nine_alt_end {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N9>, <&kp END>;
-                        mods = <(MOD_LCTL|MOD_RCTL)>;
-                        display-name = "9/Ctrl+End";
+                        mods = <(MOD_LALT|MOD_RALT)>;
+                        display-name = "9/Alt+End";
                 };
         };
 
@@ -187,7 +192,7 @@
    &kp ESC   &kp TAB      &kp Q         &kp W         &kp E         &kp R         &kp T               &kp Y      &kp U      &kp I       &kp O       &kp P      &kp GRAVE                 &kp ESC
              &kp SYMBOLS  &kp A         &kp S         &kp D         &kp F         &kp G               &kp H      &kp J      &kp K       &kp L       &kp SEMI   &thl SYMBOLS SINGLE_QUOTE
              &kp LCTRL    &cpx LG(Z) Z  &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V  &kp B               &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH   &mth RCTRL BACKSLASH
-                                                        &mth LALT DEL   &mth SHFT SPACE   &mth LCMD RET    &mth RCMD RET   &mth SHFT SPACE   &mth RALT BSPC
+                                                        &mth LALT DEL   &mth LSHFT SPACE   &mth LCMD RET    &mth RCMD RET   &mth RSHFT SPACE   &mth RALT BSPC
                         >;
                 };
 
