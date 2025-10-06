@@ -216,35 +216,35 @@
                 // OLD LAYERS //
                 ////////////////
 
-                thumbsmacold_layer {
-                        label = "THUMBS";
+                // thumbsmacold_layer {
+                //         label = "THUMBS";
 // | LALT-TAB-ESC | CONFG/MOUSE |  Q     |    W   |    E   |    R   |  T  |             |  Y  |    U   |    I   |    O   |    P   |  [/{  | RALT-]/} |
 //                |    SYMBS    |  A     |    S   |    D   |    F   |  G  |             |  H  |    J   |    K   |    L   |    ;   |   '   |
 //                |    NUMBS    |  Z     |    X   |    C   |    V   |  B  |             |  N  |    M   |   ,/<  |  ./>   |   /    |  \/|  |
 //                                          | LCTRL-DEL | LSFT-SPC | LCMD-RET |      | RCMD-RET | RSTF-SPC | RCTRL-BKSP |
-                        bindings = <
-   &dth_tab_esc_holdalt   &dt_config_mouse  &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &dth_rbkt_esc_holdralt
-                          &mo SYMBOLS       &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
-                          &none             &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
-                                              &mth LCTRL DEL   &mth LSHFT SPACE  &mth LCMD RET        &mth RCMD RET   &mth RSHFT SPACE   &mth RCTRL BSPC
-                        >;
-                };
+//                         bindings = <
+//    &dth_tab_esc_holdalt   &dt_config_mouse  &kp Q    &kp W         &kp E         &kp R                       &kp T     &kp Y      &kp U      &kp I       &kp O       &kp P           &kp LEFT_BRACKET   &dth_rbkt_esc_holdralt
+//                           &mo SYMBOLS       &kp A    &kp S         &kp D         &kp F                       &kp G     &kp H      &kp J      &kp K       &kp L       &kp SEMI        &kp SINGLE_QUOTE
+//                           &none             &kp Z    &cpx LG(X) X  &cpx LG(C) C  &cpx LG(V) V                &kp B     &kp N      &kp M      &kp COMMA   &kp DOT     &kp FSLH        &kp BACKSLASH
+//                                               &mth LCTRL DEL   &mth LSHFT SPACE  &mth LCMD RET        &mth RCMD RET   &mth RSHFT SPACE   &mth RCTRL BSPC
+//                         >;
+//                 };
 
 
-                symbolsold_layer {
-                        label = "SYMBLSv3";
+                // symbolsold_layer {
+                //         label = "SYMBLSv3";
 // -------------------------------------------JORNE--SYMBOLSv3----------------------------------------------
 // | TAB | CONFG/MOUSE |  1  |  2  |  3  |  4  |  5  |             | 6/PGUP | 7/HOME |  8/UP  |  9/END  |  0  | [/{  | ESC |
 //       |     -v-     |  !  |  @  |  #  |  $  |  %  |             | ^/PGDN | &/LEFT | */DOWN | (/RIGHT |  )  | ]/} |
 //       |     -v-     |     |     |     |     |     |             |   -/_  |  +/=   |   ,/<  |   ./>   |     | `/~ |
 //                         | LCTRL-DEL | LSFT-SPC | RET |       | RET | RSTF-SPC | RCTRL-BKSP |     
-                        bindings = <
-   &kp TAB   &dt_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N0     &kp LBKT    &kp ESC
-             &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &ampsctrlleft   &starandctrldown    &lparctrlright  &kp RPAR   &kp RBKT 
-             &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &kp GRAVE
-                                      &mth LCTRL DEL  &mth LSHFT SPACE  &kp RET   &kp RET  &mth RSHFT SPACE   &mth RCTRL BSPC
-                        >;
-                };
+//                         bindings = <
+//    &kp TAB   &dt_config_mouse  &kp N1    &kp N2  &kp N3    &kp N4    &kp N5           &sixctrlpgup    &sevenctrlhome  &eightctrlup        &ninectrlend    &kp N0     &kp LBKT    &kp ESC
+//              &trans            &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn  &ampsctrlleft   &starandctrldown    &lparctrlright  &kp RPAR   &kp RBKT 
+//              &trans            &none     &none   &none     &none     &none            &kp MINUS       &kp EQUAL       &kp COMMA           &kp DOT         &none      &kp GRAVE
+//                                       &mth LCTRL DEL  &mth LSHFT SPACE  &kp RET   &kp RET  &mth RSHFT SPACE   &mth RCTRL BSPC
+//                         >;
+//                 };
 
                 ////////////////////
                 // OLD LAYERS END //
