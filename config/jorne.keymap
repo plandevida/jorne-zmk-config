@@ -110,7 +110,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N8>, <&kp UP>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        mods = <(MOD_LCTL|MOD_RCTL)>;
                         display-name = "8/Ctrl+Up";
                 };
 
@@ -119,7 +119,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp AMPS>, <&kp LEFT>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        mods = <(MOD_LCTL|MOD_RCTL)>;
                         display-name = "&/Ctrl+Left";
                 };
 
@@ -128,7 +128,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp STAR>, <&kp DOWN>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        mods = <(MOD_LCTL|MOD_RCTL)>;
                         display-name = "*/Ctrl+Down";
                 };
 
@@ -137,7 +137,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp LPAR>, <&kp RIGHT>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        mods = <(MOD_LCTL|MOD_RCTL)>;
                         display-name = "(/Ctrl+Right";
                 };
 
@@ -146,7 +146,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N6>, <&kp PG_UP>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        mods = <(MOD_LCTL|MOD_RCTL)>;
                         display-name = "6/Ctrl+PgUp";
                 };
 
@@ -155,7 +155,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp CARET>, <&kp PG_DN>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        mods = <(MOD_LCTL|MOD_RCTL)>;
                         display-name = "^/Ctrl+PgDn";
                 };
 
@@ -164,7 +164,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N7>, <&kp HOME>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        mods = <(MOD_LCTL|MOD_RCTL)>;
                         display-name = "7/Ctrl+Home";
                 };
 
@@ -173,7 +173,7 @@
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N9>, <&kp END>;
-                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        mods = <(MOD_LCTL|MOD_RCTL)>;
                         display-name = "9/Ctrl+End";
                 };
         };
