@@ -105,76 +105,76 @@
                 //         display-name = "RBrkt/Esc/RAlt";
                 // };
 
-                // on tap 8, on alt+tap UP
-                eightaltup: eight_alt_up {
+                // on tap 8, on Ctrl+tap UP
+                eightctrlup: eight_ctrl_up {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N8>, <&kp UP>;
-                        mods = <(MOD_LALT|MOD_RALT)>;
-                        display-name = "8/Alt+Up";
+                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        display-name = "8/Ctrl+Up";
                 };
 
-                // on tap &, on alt+tap LEFT
-                ampsaltleft: amps_alt_left {
+                // on tap &, on Ctrl+tap LEFT
+                ampsctrlleft: amps_ctrl_left {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp AMPS>, <&kp LEFT>;
-                        mods = <(MOD_LALT|MOD_RALT)>;
-                        display-name = "&/Alt+Left";
+                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        display-name = "&/Ctrl+Left";
                 };
 
-                // on tap *, on alt+tap DOWN
-                starandaltdown: star_alt_down {
+                // on tap *, on Ctrl+tap DOWN
+                starandctrldown: star_ctrl_down {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp STAR>, <&kp DOWN>;
-                        mods = <(MOD_LALT|MOD_RALT)>;
-                        display-name = "*/Alt+Down";
+                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        display-name = "*/Ctrl+Down";
                 };
 
-                // on tap (, on alt+tap RIGHT
-                lparaltright: lpar_alt_right {
+                // on tap (, on Ctrl+tap RIGHT
+                lparctrlright: lpar_ctrl_right {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp LPAR>, <&kp RIGHT>;
-                        mods = <(MOD_LALT|MOD_RALT)>;
-                        display-name = "(/Alt+Right";
+                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        display-name = "(/Ctrl+Right";
                 };
 
-                // on tap 6, on alt+tap PGUP
-                sixaltpgup: six_alt_pgup {
+                // on tap 6, on Ctrl+tap PGUP
+                sixctrlpgup: six_ctrl_pgup {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N6>, <&kp PG_UP>;
-                        mods = <(MOD_LALT|MOD_RALT)>;
-                        display-name = "6/Alt+PgUp";
+                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        display-name = "6/Ctrl+PgUp";
                 };
 
-                // on tap ^, on alt+tap PDOWN
-                caretaltpgdn: caret_alt_pgup {
+                // on tap ^, on Ctrl+tap PDOWN
+                caretctrlpgdn: caret_ctrl_pgup {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp CARET>, <&kp PG_DN>;
-                        mods = <(MOD_LALT|MOD_RALT)>;
-                        display-name = "^/Alt+PgDn";
+                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        display-name = "^/Ctrl+PgDn";
                 };
 
-                // on tap 7, on alt+tap HOME
-                sevenalthome: seven_alt_home {
+                // on tap 7, on Ctrl+tap HOME
+                sevenctrlhome: seven_ctrl_home {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N7>, <&kp HOME>;
-                        mods = <(MOD_LALT|MOD_RALT)>;
-                        display-name = "7/Alt+Home";
+                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        display-name = "7/Ctrl+Home";
                 };
 
-                // on tap 9, on alt+tap END
-                ninealtend: nine_alt_end {
+                // on tap 9, on Ctrl+tap END
+                ninectrlend: nine_ctrl_end {
                         compatible = "zmk,behavior-mod-morph";
                         #binding-cells = <0>;
                         bindings = <&kp N9>, <&kp END>;
-                        mods = <(MOD_LALT|MOD_RALT)>;
-                        display-name = "9/Alt+End";
+                        mods = <(MOD_LCTRL|MOD_RCTRL)>;
+                        display-name = "9/Ctrl+End";
                 };
         };
 
@@ -205,8 +205,8 @@
 //                |  -v-  |     |  (  |  )  | ] ø } | [ ø { |             |   -/_  |  +/=   |   ,/<  |   ./>   | / ∆ ? |  -v-  |
 //                                     |  -v-  |  -v-  |  -v-  |       |  -v-  |  -v-  |  -v-  |     
                         bindings = <
-   &thl CONFIG ESC   &trans  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5           &sixaltpgup     &sevenalthome  &eightaltup        &ninealtend     &kp N0     &trans   &thl CONFIG ESC
-                     &trans  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT        &caretaltpgdn   &ampsaltleft   &starandaltdown    &lparaltright   &kp RPAR   &trans
+   &thl CONFIG ESC   &trans  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5           &sixctrlpgup     &sevenctrlhome  &eightctrlup        &ninectrlend     &kp N0     &trans   &thl CONFIG ESC
+                     &trans  &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT        &caretctrlpgdn   &ampsctrlleft   &starandctrldown    &lparctrlright   &kp RPAR   &trans
                      &trans  &none     &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT         &kp MINUS       &kp EQUAL      &kp COMMA          &kp DOT         &kp FSLH   &trans
                                                         &trans  &trans  &trans      &trans  &trans  &trans
                         >;
