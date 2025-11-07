@@ -60,7 +60,7 @@
                         // flavor = "tap-preferred";
                         // flavor = "balanced";
                         // flavor = "hold-preferred";
-                        flavor = "tap-unless-interrupted";
+                        flavor = "balanced";
                         bindings = <&mo>, <&kp>;
                         display-name = "Tap-Hold-Layer";
                 };
