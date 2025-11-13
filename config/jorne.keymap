@@ -38,13 +38,19 @@
                         compatible = "zmk,behavior-hold-tap";
                         #binding-cells = <2>;
                         // https://zmk.dev/docs/keymaps/behaviors/hold-tap#tapping-term-ms
+                        // This value defines how long a key must be pressed to trigger the "hold" behavior, alongside other factors described in interrupt flavors. The default is 200ms.
                         tapping_term_ms = <200>;
                         // https://zmk.dev/docs/keymaps/behaviors/hold-tap#quick-tap-ms
-                        quick-tap-ms = <160>;
+                        // If you press a tapped hold-tap again within quick-tap-ms milliseconds of the first press, it will always trigger the tap behavior. This is useful for keys like backspace, where a quick tap-then-hold can be used to hold it down to delete long parts of text.
+                        quick-tap-ms = <145>;
                         // https://zmk.dev/docs/keymaps/behaviors/hold-tap#require-prior-idle-ms
+                        // If a hold-tap is pressed within require-prior-idle-ms of another non-modifier key (not behavior), then the hold-tap will always resolve in a tap. This effectively disables the hold-tap when typing quickly, which can be quite useful for home-row mods. It can also have the effect of removing the input delay when typing quickly, since the hold-tap immediately resolves to a tap on key press.
                         require-prior-idle-ms = <100>;
                         // https://zmk.dev/docs/keymaps/behaviors/hold-tap#interrupt-flavors
-                        flavor = "hold-preferred";
+                        // flavor = "tap-preferred";
+                        // flavor = "balanced";
+                        // flavor = "hold-preferred";
+                        flavor = "balanced";
                         bindings = <&kp>, <&kp>;
                         display-name = "Mod-Tap-Hold";
                 };
@@ -55,12 +61,9 @@
                         #binding-cells = <2>;
                         // tapping_term_ms = <150>;
                         tapping_term_ms = <200>;
-                        quick-tap-ms = <160>;
+                        quick-tap-ms = <145>;
                         require-prior-idle-ms = <100>;
-                        // flavor = "tap-preferred";
-                        // flavor = "balanced";
-                        flavor = "hold-preferred";
-                        // flavor = "balanced";
+                        flavor = "balanced";
                         bindings = <&mo>, <&kp>;
                         display-name = "Tap-Hold-Layer";
                 };
