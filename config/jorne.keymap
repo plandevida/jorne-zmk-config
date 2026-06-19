@@ -270,9 +270,9 @@
 //       | -v-   | CTRL |  1  |  2  |  3  |  0  |       | ___ | ___ | ,/< | ./> |  /  | LCMD |
 //                              | -v- | -v- | RET |   | RET | -v- | -v- |
                         bindings = <
-   &trans &tog CONFIG &kp LALT   &kp N7 &kp N8 &kp N9 &kp EQUAL          &kp PG_UP &none    &kp UP    &none     &kp HOME  &none     &kp ESC
-          &trans      &kp LSHFT  &kp N4 &kp N5 &kp N6 &kp MINUS          &kp PG_DN &kp LEFT &kp DOWN  &kp RIGHT &kp END   &caps_word
-          &trans      &kp LCTRL  &kp N1 &kp N2 &kp N3 &kp N0             &none     &none    &kp COMMA &kp DOT   &kp FSLH  &kp LCMD
+   &thl CONFIG ESC &trans &kp LALT   &kp N7 &kp N8 &kp N9 &kp EQUAL          &kp PG_UP &none    &kp UP    &none     &kp HOME  &none     &kp ESC
+                   &trans &kp LSHFT  &kp N4 &kp N5 &kp N6 &kp MINUS          &kp PG_DN &kp LEFT &kp DOWN  &kp RIGHT &kp END   &caps_word
+                   &trans &kp LCTRL  &kp N1 &kp N2 &kp N3 &kp N0             &none     &none    &kp COMMA &kp DOT   &kp FSLH  &kp LCMD
                                              &trans &trans &kp RET    &kp RET  &trans &trans
                         >;
                 };
@@ -286,9 +286,9 @@
 //       |  -v-  | CTRL | ___ | ___ | ___ |    ___    |   |    ___    |     ___    |    ___     |     ___     | ___ | -v- |
 //                                 | -v- | -v- | LCLK |   |RCLK| -v- | -v- |
                         bindings = <
-   &trans &tog CONFIG &kp LALT  &none &none &none &msc SCRL_DOWN         &msc SCRL_DOWN &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none &none &none
-          &trans      &kp LSHFT &none &none &none &msc SCRL_UP           &msc SCRL_UP   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
-          &trans      &kp LCTRL &none &none &none &none                  &none &none          &none          &none           &none &none
+   &thl CONFIG ESC &trans &kp LALT  &none &none &none &msc SCRL_DOWN         &msc SCRL_DOWN &msc SCRL_LEFT &mmv MOVE_UP   &msc SCRL_RIGHT &none &none &none
+                   &trans &kp LSHFT &none &none &none &msc SCRL_UP           &msc SCRL_UP   &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_RIGHT &none &none
+                   &trans &kp LCTRL &none &none &none &none                  &none          &none          &none          &none           &none &none
                                            &trans &trans &mkp LCLK    &mkp RCLK &trans &trans
                         >;
                 };
@@ -297,14 +297,14 @@
                 config_layer {
                         label = "CONFG";
 // -----------------------------------------------------------------------------------------
-// | -v- | -v- |  THUMBSMAC   | NUMBERS      |  SYMBOLS  |  MOUSE  | HOMEMODMAC |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         | ZMK_STUDIO |  BLDR    | RST |
-//       | -v- | SYMBOLSTWO   | SYMBOLSTHREE | OUT_BLE   | OUT_TOG |  OUT_USB   |   |      RGB_ON      |      RGB_OFF      |       RGB_OG      | RGB_SPI |   RGB_SPD  |  RGB_EFF |
+// | -v- | -v- |  THUMBSMAC   | NMBERS       |  SYMBOLS  |  MOUSE  | HOMEMODMAC |   | EXT_POWER_ON_CMD | EXT_POWER_OFF_CMD | EXT_POWER_TOGGLE_CMD |         | ZMK_STUDIO |  BLDR    | RST |
+//       | -v- |  SYMBOLSTWO  | SYMBOLSTHREE | OUT_BLE   | OUT_TOG |   OUT_USB  |   |      RGB_ON      |      RGB_OFF      |       RGB_OG      | RGB_SPI |   RGB_SPD  |  RGB_EFF |
 //       | -v- |  VALORANT    | BT0          | BT1       | BT2     | BTCLR      |   |      BL_ON       |      BL_OFF       |       BL_TOG         | BL_INC  |   BL_DEC   |    ___   |
 //                                              | -v-       | -v-     | -v-     |   | -v- | -v- | -v- |
                         bindings = <
-   &trans &trans  &to THUMBSMAC    &to NUMBERS    &to SYMBOLS   &to NUMBERS   &to MOUSE          &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &studio_unlock   &none            &bootloader      &sys_reset
-          &trans  &none            &none          &out OUT_BLE  &out OUT_USB  &out OUT_TOG       &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
-          &trans  &none            &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR         &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
+   &trans &trans  &to THUMBSMAC    &to NUMBERS    &to SYMBOLS   &to MOUSE     &to HOMEMODMAC         &ext_power EP_ON  &ext_power EP_OFF  &ext_power EP_TOG  &studio_unlock   &none            &bootloader      &sys_reset
+          &trans  &none            &none          &out OUT_BLE  &out OUT_USB  &out OUT_TOG           &rgb_ug RGB_ON    &rgb_ug RGB_OFF    &rgb_ug RGB_TOG    &rgb_ug RGB_SPI  &rgb_ug RGB_SPD  &rgb_ug RGB_EFF
+          &trans  &none            &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_CLR             &bl BL_ON         &bl BL_OFF         &bl BL_TOG         &bl BL_INC       &bl BL_DEC       &none
                                                                            &trans &trans &trans   &trans &trans &trans
                         >;
                 };
