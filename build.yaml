@@ -24,7 +24,7 @@ include:
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano
     shield: jorne_right
-  - board: nice_nano//zmk@1
+  - board: nice_nano@1.0.0//zmk
     shield: jorne_left
-  - board: nice_nano//zmk@1
+  - board: nice_nano@1.0.0//zmk
     shield: jorne_right
