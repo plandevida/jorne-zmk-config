@@ -217,7 +217,7 @@
 //                                 |  -v-  |  -v-  |  -v-  |       |  -v-  |  -v-  |  -v-  |     
                         bindings = <
    &thl CONFIG ESC   &trans  &kp N1    &kp N2    &kp N3    &kp N4    &kp N5           &sixctrlpgup     &sevenctrlpgdn  &eightctrlhome  &ninectrlend     &kp N0     &kp GRAVE   &thl CONFIG ESC
-                     &trans  &none     &kp LBCR  &kp LBKT  &kp LPAR  &kp CARET        &ampsctrlleft    &rparctrldown   &rbktctrlup     &rbrcctrlright   &kp EQUAL   &trans
+                     &trans  &none     &kp LBRC  &kp LBKT  &kp LPAR  &kp CARET        &ampsctrlleft    &rparctrldown   &rbktctrlup     &rbrcctrlright   &kp EQUAL  &trans
                      &trans  &none     &kp EXCL  &kp AT    &kp HASH  &kp DLLR         &kp MINUS        &kp STAR        &kp COMMA       &kp DOT          &kp FSLH   &trans
                                                         &trans  &trans  &trans      &trans  &trans  &trans
                         >;
