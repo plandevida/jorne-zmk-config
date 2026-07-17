@@ -26,3 +26,5 @@ include:
   - board: nice_nano@1.0.0//zmk
     shield: jorne_right nice_oled
     artifact-name: jorne_right_nice_oled
+  - board: nice_nano@1.0.0//zmk
+    shield: settings_reset
