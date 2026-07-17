@@ -21,8 +21,9 @@ include:
   - board: nice_nano@1.0.0//zmk
     shield: jorne_left nice_oled
     snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
     artifact-name: jorne_left_nice_oled
   - board: nice_nano@1.0.0//zmk
     shield: jorne_right nice_oled
     artifact-name: jorne_right_nice_oled
+    cmake-args: -DCONFIG_ZMK_STUDIO=y CONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
