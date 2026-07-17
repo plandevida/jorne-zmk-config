@@ -28,3 +28,4 @@ include:
     artifact-name: jorne_right_nice_oled
   - board: nice_nano@1.0.0//zmk
     shield: settings_reset
+    artifact-name: zmk_ble_reset
